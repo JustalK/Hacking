@@ -3,7 +3,10 @@
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{tabularx}
-
+\usepackage[frenchb]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 
 \usepackage{geometry,wrapfig,lipsum}
  \geometry{
@@ -25,7 +28,7 @@
 \begin{document}
 
 \begin{center}
-\textbf{\Huge{FAILLE WEB}}
+\textbf{\Huge{FAILLES}}
 \line(1,0){300}\\
 Verrou par verrou et l'un apr\`es l'autre, aucun syst\`eme ne r\'esistera !\\
 \vspace{3cm}
@@ -40,6 +43,51 @@ Verrou par verrou et l'un apr\`es l'autre, aucun syst\`eme ne r\'esistera !\\
 \newpage
 \tableofcontents
 
+\newpage
+\section{Ecrire des données par dessus une images - Caché du contenu}
+\subsection{Prérequis}
+\hspace*{0.6cm}Pour réaliser cela, il faut impérativement avoir téléchargé et installé sur son ordinateur 7zip, un utilitaire de compression.
+\subsection{Etapes par Etape}
+\hspace*{0.6cm}Le but ici est simplement de s'amuser à cacher des fichiers de tous genre dans une image. Cela ne semble pas avoir d'interet quelconque mais permet avec d'autres failles de faire télécharger à l'insu de l'utilisateur le malware et de le déclencher d'une autre méthode. Comment fais-t-on ?
+
+\newpage
+
+\section{Fonctions PHP}
+\subsection{Logique humaine}
+\subsubsection{L'ancrage du "str replace" ou le mauvais filtre}
+\hspace*{0.6cm}Le filtre est un classique du WEB. Toutes les chaines qui entrent doivent être analysé pour empecher l'utilisateur d'entrer des choses \`a des fins malicieuses. Même ce principe de base qui consiste à simplement éliminé une chaine dans une chaine peut avec une simple erreur humaine permettre de faire un peu tout et n'importe quoi. Prenons l'exemple d'un simple formulaire :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\hspace*{0.6cm}<form method="POST" action="">\\
+\hspace*{1.2cm}<input type="text" name="secret"><br>\\
+\hspace*{1.2cm}<input type="submit" name="send" value="Envoyer">\\
+\hspace*{0.6cm}</form>
+}}
+\vspace{0.2cm}\\
+\hspace*{0.6cm}Il s'agit d'un simple champ texte que j'envoie par une méthode POST sur la même page que ce bout de code. Si vous ne comprenez pas,ce n'est pas bien grave, ceci ne sert qu'à mettre un contexte. Maintenant imaginons que nous souhaitons récupéré la variable et filtrer tout Javascript :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\hspace*{0.6cm}\$var=str\_replace("<script>","",\$\_POST["secret"]); 
+}}
+\vspace{0.2cm}\\
+J'ai retrouv\'e ce bout de code sur plusieurs site et ceci m'a légèrement fait sourire. Comme on peux le voir sur cette ligne ci-dessus, nous remplaçons toutes les balises <script> par une chaine vide. Il y a pourtant ici 2 erreurs flagrantes.\\
+La première demande de connaitre exactement ce que fait la balise str\_replace. Dans le HTML, il est possible d'utiliser des balises écrites en minuscule ou en majuscule. Or, str\_replace respecte la case, il m'est donc possible de rentrer une balise <SCRIPT> sans que le filtre ne s'alarme.
+La deuxième est simple d'ordre logique, que se passe-t-il si j'envoie ceci via mon script PHP :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\hspace*{0.6cm}<sc<script>ript>alert("HAHA")</sc<script>ript>   
+}}
+\vspace{0.2cm}\\
+Dans cette chaine, si nous remplaçons script par une chaine vide nous obtenons :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\hspace*{0.6cm}<script>alert("HAHA")<script> 
+}}
+\vspace{0.2cm}\\
+ On réussit ainsi à bypasser le filtre de manière assez simple.
+\subsubsection{Solutions}
+	Pourquoi ne pas simplement utiliser les fonctions PHP : htmlentities() et  htmlspecialchars(). 
+ 
 \newpage
 \section{Directory transversal - Attaque sur le htaccess}
 \subsection{Explications}
@@ -73,7 +121,6 @@ La directive \textbf{requiere} sp\'ecifie simplement qui est autoris\'e \`a acc\
 \vspace{0.2cm}\\
 \hspace*{0.6cm}Un fichier httpasswd prend toujours la forme ci-dessus. Ce fichier lie un utilisateur \`a un password crypt\'e via un algorithme comme SHA, DES, MD5...
 
-\newpage
 \subsection{La navigation transversale ou Directory transversal}
 \hspace*{0.6cm}Pour expliqu\'e la faille, je prendrais un exemple. Le site w3challs.com dispose d'un exemple sur cette faille du syst\`eme. Avant m\^eme de commencer l'exp\'erimentation, il faut encore un peu d'explication pour comprendre la faille. Cette faille r\'eside dans le PHP du site et en particulier dans la balise include.
 \vspace{0.2cm}\\
