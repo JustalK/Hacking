@@ -164,4 +164,54 @@ Bien entendu, avant d'arriver \`a cela, j'ai tap\'e plusieurs autres chemins com
 Cependant le serveur ne lira cette chaine que jusqu'au charatere null, le reste sera ignor\'e.
 \subsection{Solution}
 Pour se pr\'emunir d'une telle attaque, pourquoi ne pas simplement escape tout les ../ ou \%2e\%2e/ (si encod\'e) lors des navigations.
+
+\newpage
+\section{Injection de Header dans les mails}
+\subsubsection{Qu'est ce qu'un envoie de message ?}
+L'envoie de message sur le web se traduit par l'utilisation du protocole SMTP. La communication entre le client et le serveur qui va recueillir le message est la suivante :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+S: 220 smtp.example.com ESMTP Postfix
+\vspace{0.2cm}\\
+C: HELO relay.example.org 
+\vspace{0.2cm}\\
+S: 250 Hello relay.example.org, I am glad to meet you
+\vspace{0.2cm}\\
+C: MAIL FROM:<bob@example.org>
+\vspace{0.2cm}\\
+S: 250 Ok
+\vspace{0.2cm}\\
+C: RCPT TO:<alice@example.com>
+\vspace{0.2cm}\\
+S: 250 Ok
+\vspace{0.2cm}\\
+C: RCPT TO:<theboss@example.com>
+\vspace{0.2cm}\\
+S: 250 Ok
+\vspace{0.2cm}\\
+C: DATA
+\vspace{0.2cm}\\
+S: 354 End data with <CR><LF>.<CR><LF>
+\vspace{0.2cm}\\
+\color{blue}{C: From: "Bob Example" <bob@example.org>\\
+C: To: "Alice Example" <alice@example.com>\\
+C: Cc: theboss@example.com\\
+C: Date: Tue, 15 January 2008 16:02:43 -0500\\
+C: Subject: Test message\\
+C: \vspace{0.0cm}\\
+C: Hello Alice.
+C: This is a test message with 5 header fields and 4 lines in the message body.\\
+C: Your friend,\\
+C: Bob\\
+C: .}
+\vspace{0.2cm}\\
+\color{black}{S: 250 Ok: queued as 12345
+\vspace{0.2cm}\\
+C: QUIT
+\vspace{0.2cm}\\
+S: 221 Bye\\
+{The server closes the connection}}
+}}
+
+Nous n'allons pas nous interessé à tous le concept entre le client et le serveur (bien que cela est aussi très intéressant). La partie en bleu est la seule utile pour comprendre la faille. Comme on peux le voir, on retrouve ici toutes les informations composants un email. Elles sont envoyés comme tels au serveur.
 \end{document}
