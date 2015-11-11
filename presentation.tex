@@ -162,11 +162,11 @@ Bien entendu, avant d'arriver \`a cela, j'ai tap\'e plusieurs autres chemins com
 }}
 \vspace{0cm}\\
 Cependant le serveur ne lira cette chaine que jusqu'au charatere null, le reste sera ignor\'e.
-\subsection{Solution}
+\subsection{Solutions}
 Pour se pr\'emunir d'une telle attaque, pourquoi ne pas simplement escape tout les ../ ou \%2e\%2e/ (si encod\'e) lors des navigations.
 
 \newpage
-\section{Injection de Header dans les mails}
+\section{SMTP Injection - Injection dans la fonction php mail()}
 \subsubsection{Qu'est ce qu'un envoie de message ?}
 L'envoie de message sur le web se traduit par l'utilisation du protocole SMTP. La communication entre le client et le serveur qui va recueillir le message est la suivante :
 \vspace{0.2cm}\\
@@ -212,6 +212,90 @@ C: QUIT
 S: 221 Bye\\
 {The server closes the connection}}
 }}
+\vspace{0.2cm}
 
-Nous n'allons pas nous interessé à tous le concept entre le client et le serveur (bien que cela est aussi très intéressant). La partie en bleu est la seule utile pour comprendre la faille. Comme on peux le voir, on retrouve ici toutes les informations composants un email. Elles sont envoyés comme tels au serveur.
+Nous n'allons pas nous interessé à tous le concept entre le client et le serveur (bien que cela tout aussi intéressant). La partie en bleu est la seule utile pour comprendre la faille. Comme on peux le voir, on retrouve ici toutes les informations composants un email.
+
+\subsubsection{La fonction mail() de php}
+
+Dans PHP, il existe une méthode pour envoyer un mail assez facile à utiliser. Comme on peux le voir ci-dessous, on retrouve la variable pour le destinataire, la variable pour le sujet du mail, la variable pour le corp du message et une variable pour les headers du mail. Cette dernière variable est celle qui nous intéresse le plus et c'est sur cette dernière que je vais agir.
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\hspace*{0.6cm}mail(\$destinataire, \$sujet, \$message, \$headers);
+}}
+\vspace{0cm}\\
+La variable header permet entre autre de rajouter un élément pour le mail. Dans le code en bleu précédemment, on retrouvait CC par exemple. Ci-dessous, je fais une liste des différents Header que l'on peux utiliser (non-exhaustive) :\\
+\begin{itemize}
+  \item CC (Pour mettre quelqu'un en copie du message)
+  \item BCC (Pour mettre quelqu'un en copie du message de manière invisible)
+  \item FCC (Pour copier le message dans un fichier)
+  \item Reply-To (L'adresse vers où diriger le message si le destinataire répond)
+\end{itemize}
+
+\subsection{Qu'est ce qu'une injection de header}
+
+Lorsque l'on envoie un mail par la fonction mail() de php, l'envoie se tranformera en ceci lors de la requête :\\
+\fbox{\parbox{\textwidth}{
+\hspace*{0.6cm}To: \$destinataire\\
+\hspace*{0.6cm}Subject: \$sujet\\
+\hspace*{0.6cm}\$headers\\
+\hspace*{0.6cm}\$message
+}}
+\vspace{0.1cm}\\
+
+Dans cette fonction, de nombreux filtres existent sur les varaibles \$destinataire, \$subject et \$message. Cependant sur le champs \$header, il est toujours possible d'agir et il le sera certainement toujours. Maintenant, il faut comprendre maintenant comment ce bout de texte est envoyé au serveur, ce n'est pas aussi beau qu'au dessus. Ces informations sont séparé par des <LF> afin que le serveur puissent différencier les différentes champs. Un <LF> est un passage à la ligne dont la traduction hexadécimale est 0x0A. Cette information est très importante. Le but de la faille va être de surcharger le header avec des informations complémentaire pour obtenir par exemple une copie du message. Par exemple, si notre message est le suivant :\\
+\fbox{\parbox{\textwidth}{
+\hspace*{0.6cm}mail("lala@gmail.com", "Lala", "LalaLALA", "");
+}}
+\vspace{0.1cm}\\
+
+Cela se traduit par :\\
+\fbox{\parbox{\textwidth}{
+\hspace*{0.6cm}To: lala@gmail.com\\
+\hspace*{0.6cm}Subject: Lala\\
+\hspace*{0.6cm}\\
+\hspace*{0.6cm}LalaLALA
+}}
+\vspace{0.1cm}\\
+
+Maintenant, si l'on change le header par quelques choses comme ceci : \%0ABCC:lolo@gmail.com\\
+\fbox{\parbox{\textwidth}{
+\hspace*{0.6cm}To: lala@gmail.com\\
+\hspace*{0.6cm}Subject: Lala\\
+\hspace*{0.6cm}\\
+\hspace*{0.6cm}BCC:lolo@gmail.com\\
+\hspace*{0.6cm}LalaLALA
+}}
+\vspace{0.1cm}\\
+
+On se retrouve alors à injecter un header qui n'était pas prévu à la base !
+
+\subsection{Exemple}
+
+Pour expliquer la faille, je vais me servir du site de w3Challs. Sur ce dernier, il y a une page pour tester ce type d'injection. Pour commencer, il faut chercher un champ d'un formulaire qui pourrait utiliser cette fonction.
+\vspace{0.2cm}\\
+\includegraphics[width=\textwidth]{8}\\
+\vspace{0.2cm}
+
+On trouve alors un très beau (et surtout moche) formulaire pour envoyer des messages aux créateurs du site. On remarque que le premier champ est très susceptible d'avoir une faille. On tente donc une injection de header. Je vais dans un premier temps créer ma petite injection dans le champ adresse mail en écrivant ceci : lala@gmail\%0ABCC:lolo@gmail.com
+\vspace{0.2cm}\\
+\includegraphics[width=\textwidth]{9}\\
+\vspace{0.2cm}
+
+En utilisant ensuite Tamper Data afin d'altérer la requête POST, on peux prévenir notre requête d'être encoder en format URL. Car dans notre cas, le symbole \% est automatiquement transformé par Firefox en \%25, ce qui n'est pas ce que l'on veut.
+\vspace{0.2cm}\\
+\includegraphics[width=\textwidth]{10}\\
+\vspace{0.2cm}
+
+Enfin, on envoie la requête et pouvons maintenant consulter sur notre adresse un double du mail que l'admin a reçu :p Avec cette méthode, il est possible de spammer des personnes, de se faire passer pour certaines personnes...
+
+\subsection{Solutions}
+Pour se protéger contre ce type d'attaque, il suffit de vérifier que les informations entré par l'utilisateur ne contiennent pas les symboles \textbackslash n ou \textbackslash r. Par exemple, le bout de code suivant réalise cette opération :\\
+\vspace{0.1cm}\\
+\fbox{\parbox{\textwidth}{
+\hspace*{0.6cm}if(eregi("\textbackslash r",\$from) or eregi("\textbackslash n",\$from)) \{\\
+\hspace*{1.2cm}die("Why ?? :(");\\
+\hspace*{0.6cm}\}
+}}
+\vspace{0.1cm}\\
 \end{document}
