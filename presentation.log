@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.26)  11 NOV 2015 16:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.26)  11 NOV 2015 20:41
 entering extended mode
 **presentation.tex
 (presentation.tex
@@ -667,22 +667,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 293--301
 
  []
 
-[11 <./10.png>] (presentation.aux) ) 
+[11 <./10.png>] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--314
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
+
+ []
+
+
+Overfull \hbox (36.79999pt too wide) in paragraph at lines 315--324
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 315--324
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
+
+ []
+
+[13] [14] (presentation.aux) ) 
 Here is how much of TeX's memory you used:
- 3642 strings out of 493673
- 49125 string characters out of 3141527
+ 3645 strings out of 493673
+ 49157 string characters out of 3141527
  220311 words of memory out of 3000000
- 6928 multiletter control sequences out of 15000+200000
- 36390 words of font info for 32 fonts, out of 3000000 for 9000
+ 6930 multiletter control sequences out of 15000+200000
+ 39382 words of font info for 33 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  28i,5n,30p,792b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/en
-c/dvips/lm/lm-ec.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/l
-mbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb>
-Output written on presentation.pdf (11 pages, 1077713 bytes).
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvip
+s/lm/lm-ec.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb>
+Output written on presentation.pdf (14 pages, 1112767 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
+ 71 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

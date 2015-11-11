@@ -28,7 +28,7 @@
 \begin{document}
 
 \begin{center}
-\textbf{\Huge{FAILLES}}
+\textbf{\Huge{FAILLES}}\\
 \line(1,0){300}\\
 Verrou par verrou et l'un apr\`es l'autre, aucun syst\`eme ne r\'esistera !\\
 \vspace{3cm}
@@ -298,4 +298,37 @@ Pour se protéger contre ce type d'attaque, il suffit de vérifier que les infor
 \hspace*{0.6cm}\}
 }}
 \vspace{0.1cm}\\
+
+\newpage
+\section{Attaque temporel - Attaque par Canaux cachés}
+\subsection{Qu'est ce qu'un canal caché ?}
+
+\newpage
+\section{CSRF - Cross-site request forgery}
+\subsection{Qu'est ce qu'une attaque CRSF ?}
+Pour expliquer cela, il est beaucoup plus intéressant de prendre un exemple. Imaginons la scène suivante :\\
+\begin{itemize}
+\item Une personne s'enregistre à sa banque normalement\\
+\item La banque donne un cookie a cette personne qui permet de définir session\\
+ (Set-Cookie: SESSIONID=a804696f-93fc-48cf-9b02-267d9ed773c0)\\
+\item Puis sur d'autre onglet, cette personne navigue sur d'autres sites\\
+\item Et tombe sur un site, avec un code malicieux :\\
+\fbox{\parbox{\textwidth}{
+\begin{scriptsize}
+<form name="attack" enctype="text/plain" action="https://bank.example.com/api/transfer" METHOD="POST">\\
+  <input type="hidden" name='{"from": "Savings", "to": "00302319550440", "amount": "100.00"}'>\\
+</form>\\
+<script>document.attack.submit();</script>
+\end{scriptsize}
+}}\\
+\item Lorsque l'utilisateur arrive sur la page, son navigateur lit la page et va exécuter le code. Ce qui va résulter à un transfert de 100 euros à un certain compte bancaire\\
+\item Comme l'utilisateur a un cookie avec une session valide, la requête émis via le formulaire va etre accepté par le site de la banque
+\end{itemize}
+
+\newpage
+\section{Bibliographie}
+\subsection{SMTP Injection}
+\begin{itemize}
+\item http://www.phpsecure.info/v2/article/MailHeadersInject.php
+\end{itemize}
 \end{document}
