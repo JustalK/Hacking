@@ -25,5 +25,8 @@
 \contentsline {subsection}{\numberline {5.1}Qu'est ce qu'un canal cach\IeC {\'e} ?}{12}
 \contentsline {section}{\numberline {6}CSRF - Cross-site request forgery}{13}
 \contentsline {subsection}{\numberline {6.1}Qu'est ce qu'une attaque CRSF ?}{13}
-\contentsline {section}{\numberline {7}Bibliographie}{14}
-\contentsline {subsection}{\numberline {7.1}SMTP Injection}{14}
+\contentsline {section}{\numberline {7}XSS}{14}
+\contentsline {subsection}{\numberline {7.1}Simple XSS - balise script}{14}
+\contentsline {subsection}{\numberline {7.2}XSS Trick - Bypass htmlspecialchars in some cases}{14}
+\contentsline {section}{\numberline {8}Bibliographie}{16}
+\contentsline {subsection}{\numberline {8.1}SMTP Injection}{16}

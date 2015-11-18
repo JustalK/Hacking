@@ -326,6 +326,57 @@ Pour expliquer cela, il est beaucoup plus intéressant de prendre un exemple. Im
 \end{itemize}
 
 \newpage
+\section{XSS}
+\subsection{Simple XSS - balise script}
+Prenons le script suivant sans aucune protection :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\vspace{0.2cm}
+\includegraphics[width=0.5\textwidth]{12}
+\vspace{0.2cm}
+}}
+\vspace{0.2cm}\\
+Ici la moindre attaque XSS est possible, il est possible d'écrire directement du code dans les balises scripts. Par exemple, <script>alert(1)</script> :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\vspace{0.2cm}
+\includegraphics[width=0.4\textwidth]{13}
+\vspace{0.2cm}
+}}
+\vspace{0.2cm}\\
+On obtient alors le résultat suivant qui nous montre qu'une faille XSS est possible ici :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\vspace{0.2cm}
+\includegraphics[width=0.5\textwidth]{14}
+\vspace{0.2cm}
+}}
+\subsection{XSS Trick - Bypass htmlspecialchars in some cases}
+Dans certains cas, la fonction htmlspecialchars est inutile comme on peux le voir ci-dessous :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\vspace{0.2cm}
+\includegraphics[width=0.9\textwidth]{15}
+\vspace{0.2cm}
+}}
+\vspace{0.2cm}\\
+On peux alors faire notre injection de la manière suivante : xss";prompt(/XSS/);//
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\vspace{0.2cm}
+\includegraphics[width=0.5\textwidth]{16}
+\vspace{0.2cm}
+}}
+\vspace{0.2cm}\\
+On obtient alors le résultat suivant qui nous montre qu'une faille XSS est possible ici :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\vspace{0.2cm}
+\includegraphics[width=0.5\textwidth]{17}
+\vspace{0.2cm}
+}}
+
+\newpage
 \section{Bibliographie}
 \subsection{SMTP Injection}
 \begin{itemize}
