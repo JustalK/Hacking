@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.26)  19 NOV 2015 00:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.26)  19 NOV 2015 21:26
 entering extended mode
 **presentation.tex
 (presentation.tex
@@ -766,24 +766,63 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 355--378
 [] 
  []
 
-[14 <./12.png> <./13.png> <./14.png> <./15.png> <./16.png>] [15 <./17.png>]
-[16] (presentation.aux) ) 
+[14 <./12.png> <./13.png> <./14.png> <./15.png> <./16.png>]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 379--387
+[]
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 388--396
+[]
+ []
+
+<18.png, id=62, 879.285pt x 405.515pt>
+File: 18.png Graphic file (type png)
+ <use 18.png>
+Package pdftex.def Info: 18.png used on input line 403.
+(pdftex.def)             Requested size: 430.00462pt x 198.30806pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 399--405
+[]
+ []
+
+<19.png, id=63, 1927.2pt x 987.69pt>
+File: 19.png Graphic file (type png)
+ <use 19.png>
+Package pdftex.def Info: 19.png used on input line 410.
+(pdftex.def)             Requested size: 430.00462pt x 220.36693pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 406--412
+[]
+ []
+
+[15 <./17.png> <./18.png>] <20.png, id=67, 1927.2pt x 987.69pt>
+File: 20.png Graphic file (type png)
+ <use 20.png>
+Package pdftex.def Info: 20.png used on input line 417.
+(pdftex.def)             Requested size: 430.00462pt x 220.36693pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 413--419
+[]
+ []
+
+[16 <./19.png> <./20.png>] [17] (presentation.aux) ) 
 Here is how much of TeX's memory you used:
- 3674 strings out of 493673
- 49449 string characters out of 3141527
+ 3689 strings out of 493673
+ 49596 string characters out of 3141527
  220311 words of memory out of 3000000
- 6954 multiletter control sequences out of 15000+200000
+ 6966 multiletter control sequences out of 15000+200000
  39382 words of font info for 33 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  28i,7n,30p,792b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/
-lm-ec.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb>
-Output written on presentation.pdf (16 pages, 1136508 bytes).
+{C:/Program Files (x86)/MiK
+TeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
+/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb>
+Output written on presentation.pdf (17 pages, 1309429 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

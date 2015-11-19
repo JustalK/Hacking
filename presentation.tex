@@ -375,6 +375,47 @@ On obtient alors le résultat suivant qui nous montre qu'une faille XSS est poss
 \includegraphics[width=0.5\textwidth]{17}
 \vspace{0.2cm}
 }}
+\subsection{XSS Trick avec les guillemets simples - Bypass htmlspecialchars et htmlentities}
+Si on se réfère à la documentation de PHP, par défaut sur la fonction htmlentites et/ou htmlspecialchars le flag ENT\_COMPAT est utilisé dans la fonction. Ce flag signifie que la fonction convertit les guillements doubles et ignore les guillemets simples. Autrement dit, si le codeur en question a écrit une fonction comme :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\vspace{0.2cm}
+echo {\color{red}'}<a href={\color{blue}"}{\color{red}'}.htmlspecialchars(\$\_POST['XSS']).{\color{red}'}{\color{blue}"}>Test</a><br />{\color{red}'};
+\vspace{0.2cm}
+}}
+\vspace{0.2cm}
+
+Si on regarde attentivement, une injection XSS est donc ici possible avec par exemple la saisie suivante :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\vspace{0.2cm}
+XSS' autofocus onfocus='alert(1)
+\vspace{0.2cm}
+}}
+\vspace{0.2cm}
+
+L'autofocus permet de mettre automatiquement le focus sur le lien dès le chargement de la page tandis que le onfocus sera la fonction appelé dès que le lien aura le focus. Autrement dit, la fonction à l'intérieur du onfocus sera automatiquement chargé au chargement de la page sur le PC du client.
+
+Effectuons un petit test avec onmouseover pour voir le résultat cela dans un navigateur récent :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{18}
+}}
+\vspace{0.2cm}
+
+Je vais aussi utilisé Data Temper, un plugin de firefox, pour altérer ma requête POST afin de bypasser l'encodage du navigateur.
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{19}
+}}
+\vspace{0.2cm}
+
+On obtient alors le résultat suivant :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{20}
+}}
+\vspace{0.2cm}
 
 \newpage
 \section{Bibliographie}

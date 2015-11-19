@@ -28,5 +28,6 @@
 \contentsline {section}{\numberline {7}XSS}{14}
 \contentsline {subsection}{\numberline {7.1}Simple XSS - balise script}{14}
 \contentsline {subsection}{\numberline {7.2}XSS Trick - Bypass htmlspecialchars in some cases}{14}
-\contentsline {section}{\numberline {8}Bibliographie}{16}
-\contentsline {subsection}{\numberline {8.1}SMTP Injection}{16}
+\contentsline {subsection}{\numberline {7.3}XSS Trick avec les guillemets simples - Bypass htmlspecialchars et htmlentities}{15}
+\contentsline {section}{\numberline {8}Bibliographie}{17}
+\contentsline {subsection}{\numberline {8.1}SMTP Injection}{17}
