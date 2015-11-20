@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.26)  19 NOV 2015 21:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.26)  20 NOV 2015 21:14
 entering extended mode
 **presentation.tex
 (presentation.tex
@@ -416,20 +416,31 @@ Package: wrapfig 2003/01/31  v 3.6
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count98
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+\fancy@headwidth=\skip51
+\f@ncyO@elh=\skip52
+\f@ncyO@erh=\skip53
+\f@ncyO@olh=\skip54
+\f@ncyO@orh=\skip55
+\f@ncyO@elf=\skip56
+\f@ncyO@erf=\skip57
+\f@ncyO@olf=\skip58
+\f@ncyO@orf=\skip59
+)
 (presentation.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 39.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -447,9 +458,9 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 \makeMPintoPDFobject=\count104
 \everyMPtoPDFconversion=\toks22
 )
-LaTeX Info: Redefining \degres on input line 28.
-LaTeX Info: Redefining \dots on input line 28.
-LaTeX Info: Redefining \up on input line 28.
+LaTeX Info: Redefining \degres on input line 39.
+LaTeX Info: Redefining \dots on input line 39.
+LaTeX Info: Redefining \up on input line 39.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -488,341 +499,370 @@ LaTeX Info: Redefining \up on input line 28.
 <0.jpg, id=1, 139.722pt x 93.4692pt>
 File: 0.jpg Graphic file (type jpg)
  <use 0.jpg>
-Package pdftex.def Info: 0.jpg used on input line 35.
+Package pdftex.def Info: 0.jpg used on input line 46.
 (pdftex.def)             Requested size: 430.00462pt x 287.66351pt.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 40.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 51.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 40.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 51.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 40.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 51.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 40.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 51.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 40.
+(Font)              <10> on input line 51.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 40.
+(Font)              <7> on input line 51.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 40.
- [1
+(Font)              <5> on input line 51.
+ [1{D:/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-{D:/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./0.jpg>] (presentation
-.toc)
+ <./0.jpg>] (presentation.toc)
 \tf@toc=\write3
  [2]
 [3]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 58--88
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 69--99
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 58--88
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 69--99
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 58--88
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 69--99
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 58--88
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 69--99
 []
  []
 
 [4]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 98--114
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 109--125
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 115--123
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 126--134
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 125--138
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 136--149
 []
  []
 
 [5] <2.png, id=21, 1541.76pt x 803.0pt>
 File: 2.png Graphic file (type png)
  <use 2.png>
-Package pdftex.def Info: 2.png used on input line 146.
+Package pdftex.def Info: 2.png used on input line 157.
 (pdftex.def)             Requested size: 430.00462pt x 223.95627pt.
 
 <3.png, id=22, 1541.76pt x 803.0pt>
 File: 3.png Graphic file (type png)
  <use 3.png>
-Package pdftex.def Info: 3.png used on input line 154.
+Package pdftex.def Info: 3.png used on input line 165.
 (pdftex.def)             Requested size: 430.00462pt x 223.95627pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 140--157
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 151--168
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 140--157
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 151--168
 []
  []
 
 [6 <./2.png>]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 158--165
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 169--176
 []
  []
 
 [7 <./3.png>]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 171--216
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 182--227
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 221--228
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 232--239
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--228
+Underfull \hbox (badness 10000) in paragraph at lines 232--239
 
  []
 
 [8]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 237--245
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 248--256
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--245
+Underfull \hbox (badness 10000) in paragraph at lines 248--256
 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 246--251
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 257--262
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--251
+Underfull \hbox (badness 10000) in paragraph at lines 257--262
 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 252--260
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 263--271
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--260
+Underfull \hbox (badness 10000) in paragraph at lines 263--271
 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 261--270
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 272--281
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--270
+Underfull \hbox (badness 10000) in paragraph at lines 272--281
 
  []
 
 <8.png, id=33, 1863.96375pt x 985.6825pt>
 File: 8.png Graphic file (type png)
  <use 8.png>
-Package pdftex.def Info: 8.png used on input line 277.
+Package pdftex.def Info: 8.png used on input line 288.
 (pdftex.def)             Requested size: 430.00462pt x 227.37901pt.
  [9]
 <9.png, id=37, 1863.96375pt x 985.6825pt>
 File: 9.png Graphic file (type png)
  <use 9.png>
-Package pdftex.def Info: 9.png used on input line 282.
+Package pdftex.def Info: 9.png used on input line 293.
 (pdftex.def)             Requested size: 430.00462pt x 227.37901pt.
 
 <10.png, id=38, 1863.96375pt x 985.6825pt>
 File: 10.png Graphic file (type png)
  <use 10.png>
-Package pdftex.def Info: 10.png used on input line 287.
+Package pdftex.def Info: 10.png used on input line 298.
 (pdftex.def)             Requested size: 430.00462pt x 227.37901pt.
  [10 <./8.png> <./9.png>]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 293--301
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 304--312
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--301
+Underfull \hbox (badness 10000) in paragraph at lines 304--312
 
  []
 
 [11 <./10.png>] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--314
+Underfull \hbox (badness 10000) in paragraph at lines 323--325
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--315
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
 
  []
 
 
-Overfull \hbox (36.79999pt too wide) in paragraph at lines 315--324
+Overfull \hbox (36.79999pt too wide) in paragraph at lines 326--335
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--324
+Underfull \hbox (badness 10000) in paragraph at lines 326--335
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--325
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
  []
 
 [13] <12.png, id=53, 389.455pt x 124.465pt>
 File: 12.png Graphic file (type png)
  <use 12.png>
-Package pdftex.def Info: 12.png used on input line 337.
+Package pdftex.def Info: 12.png used on input line 348.
 (pdftex.def)             Requested size: 215.0023pt x 68.71045pt.
 
 <13.png, id=54, 326.21875pt x 87.32625pt>
 File: 13.png Graphic file (type png)
  <use 13.png>
-Package pdftex.def Info: 13.png used on input line 345.
+Package pdftex.def Info: 13.png used on input line 356.
 (pdftex.def)             Requested size: 171.99922pt x 46.04417pt.
 
 <14.png, id=55, 240.9pt x 142.5325pt>
 File: 14.png Graphic file (type png)
  <use 14.png>
-Package pdftex.def Info: 14.png used on input line 353.
+Package pdftex.def Info: 14.png used on input line 364.
 (pdftex.def)             Requested size: 215.0023pt x 127.21236pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 331--354
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 342--365
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 331--354
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 342--365
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 331--354
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 342--365
 [] 
  []
 
 <15.png, id=56, 779.91376pt x 241.90375pt>
 File: 15.png Graphic file (type png)
  <use 15.png>
-Package pdftex.def Info: 15.png used on input line 361.
+Package pdftex.def Info: 15.png used on input line 372.
 (pdftex.def)             Requested size: 387.00153pt x 120.03247pt.
 
 <16.png, id=57, 499.8675pt x 63.23625pt>
 File: 16.png Graphic file (type png)
  <use 16.png>
-Package pdftex.def Info: 16.png used on input line 369.
+Package pdftex.def Info: 16.png used on input line 380.
 (pdftex.def)             Requested size: 215.0023pt x 27.19876pt.
 
 <17.png, id=58, 240.9pt x 144.54pt>
 File: 17.png Graphic file (type png)
  <use 17.png>
-Package pdftex.def Info: 17.png used on input line 377.
+Package pdftex.def Info: 17.png used on input line 388.
 (pdftex.def)             Requested size: 215.0023pt x 129.00407pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 355--378
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 366--389
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 355--378
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 366--389
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 355--378
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 366--389
 [] 
  []
 
 [14 <./12.png> <./13.png> <./14.png> <./15.png> <./16.png>]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 379--387
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 390--398
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 388--396
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 399--407
 []
  []
 
 <18.png, id=62, 879.285pt x 405.515pt>
 File: 18.png Graphic file (type png)
  <use 18.png>
-Package pdftex.def Info: 18.png used on input line 403.
+Package pdftex.def Info: 18.png used on input line 414.
 (pdftex.def)             Requested size: 430.00462pt x 198.30806pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 399--405
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 410--416
 []
  []
 
 <19.png, id=63, 1927.2pt x 987.69pt>
 File: 19.png Graphic file (type png)
  <use 19.png>
-Package pdftex.def Info: 19.png used on input line 410.
+Package pdftex.def Info: 19.png used on input line 421.
 (pdftex.def)             Requested size: 430.00462pt x 220.36693pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 406--412
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 417--423
 []
  []
 
 [15 <./17.png> <./18.png>] <20.png, id=67, 1927.2pt x 987.69pt>
 File: 20.png Graphic file (type png)
  <use 20.png>
-Package pdftex.def Info: 20.png used on input line 417.
+Package pdftex.def Info: 20.png used on input line 428.
 (pdftex.def)             Requested size: 430.00462pt x 220.36693pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 413--419
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 424--430
 []
  []
 
-[16 <./19.png> <./20.png>] [17] (presentation.aux) ) 
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 432--445
+[]
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 432--445
+[]
+ []
+
+[16 <./19.png> <./20.png>] <21.png, id=71, 843.15pt x 407.5225pt>
+File: 21.png Graphic file (type png)
+ <use 21.png>
+Package pdftex.def Info: 21.png used on input line 450.
+(pdftex.def)             Requested size: 430.00462pt x 207.83994pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 446--452
+[]
+ []
+
+<22.png, id=72, 1863.96375pt x 986.68625pt>
+File: 22.png Graphic file (type png)
+ <use 22.png>
+Package pdftex.def Info: 22.png used on input line 457.
+(pdftex.def)             Requested size: 430.00462pt x 227.61057pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 453--459
+[]
+ []
+
+[17 <./21.png> <./22.png>] [18] (presentation.aux) ) 
 Here is how much of TeX's memory you used:
- 3689 strings out of 493673
- 49596 string characters out of 3141527
- 220311 words of memory out of 3000000
- 6966 multiletter control sequences out of 15000+200000
+ 3826 strings out of 493673
+ 51053 string characters out of 3141527
+ 223347 words of memory out of 3000000
+ 7097 multiletter control sequences out of 15000+200000
  39382 words of font info for 33 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 28i,7n,30p,792b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,12n,43p,792b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiK
 TeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/t
 ype1/public/lm/lmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 /lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.p
 fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb>
-Output written on presentation.pdf (17 pages, 1309429 bytes).
+Output written on presentation.pdf (18 pages, 1397392 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
+ 94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
