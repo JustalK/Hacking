@@ -33,5 +33,7 @@
 \contentsline {subsection}{\numberline {7.5}XSS - Bypass htmlspecialchars et htmlentities avec espace}{17}
 \contentsline {subsection}{\numberline {7.6}XSS Trick avec UTF-7 - Bypass htmlspecialchars et htmlentities}{18}
 \contentsline {subsection}{\numberline {7.7}XSS - Bypass htmlspecialchars et htmlentities avec les directives Javascript}{18}
-\contentsline {section}{\numberline {8}Bibliographie}{20}
-\contentsline {subsection}{\numberline {8.1}SMTP Injection}{20}
+\contentsline {subsection}{\numberline {7.8}XSS - Bypass htmlspecialchars et htmlentities et les filtrages de chaines}{19}
+\contentsline {subsection}{\numberline {7.9}XSS - Bypass htmlspecialchars et htmlentities avec les guillemets graves}{20}
+\contentsline {section}{\numberline {8}Bibliographie}{21}
+\contentsline {subsection}{\numberline {8.1}SMTP Injection}{21}

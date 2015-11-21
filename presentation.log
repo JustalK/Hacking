@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.26)  21 NOV 2015 23:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.26)  21 NOV 2015 23:37
 entering extended mode
 **presentation.tex
 (presentation.tex
@@ -892,12 +892,37 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 508--514
 []
  []
 
-[18 <./22.png> <./23.png>] [19 <./24.png>] [20] (presentation.aux) ) 
+[18 <./22.png> <./23.png>]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 519--525
+[]
+ []
+
+<25.png, id=81, 873.2625pt x 393.47pt>
+File: 25.png Graphic file (type png)
+ <use 25.png>
+Package pdftex.def Info: 25.png used on input line 530.
+(pdftex.def)             Requested size: 430.00462pt x 193.75058pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 526--532
+[]
+ []
+
+<26.png, id=82, 1862.96pt x 986.68625pt>
+File: 26.png Graphic file (type png)
+ <use 26.png>
+Package pdftex.def Info: 26.png used on input line 537.
+(pdftex.def)             Requested size: 430.00462pt x 227.74606pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 533--539
+[]
+ []
+
+[19 <./24.png> <./25.png>] [20 <./26.png>] [21] (presentation.aux) ) 
 Here is how much of TeX's memory you used:
- 3836 strings out of 493673
- 51151 string characters out of 3141527
+ 3846 strings out of 493673
+ 51249 string characters out of 3141527
  223347 words of memory out of 3000000
- 7105 multiletter control sequences out of 15000+200000
+ 7113 multiletter control sequences out of 15000+200000
  39382 words of font info for 33 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  28i,11n,43p,792b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -907,9 +932,9 @@ KTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
 ublic/lm/lmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr
 7.pfb>
-Output written on presentation.pdf (20 pages, 1490336 bytes).
+Output written on presentation.pdf (21 pages, 1581008 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
+ 108 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -512,7 +512,32 @@ On obtient alors le résultat suivant :
 }}
 \vspace{0.2cm}
 
-Comme on peut le voir, les deux fonctions sont complètement inutile contre ce type de script. Suivant la fonction utilisé, il est même possible de faire des redirections de pages et donc de faire ce que l'on veut (usurpation?). 
+Comme on peut le voir, les deux fonctions sont complètement inutile contre ce type de script. Suivant la fonction utilisé, il est même possible de faire des redirections de pages et donc de faire ce que l'on veut (usurpation?).
+
+\subsection{XSS - Bypass htmlspecialchars et htmlentities et les filtrages de chaines}
+
+Sur plusieurs site, j'ai pu trouvé des chaines qui filtrait les directives javascripts en utilisant les fonctions suivantes : \textbf{strpos} ou encore \textbf{stripos}. Quand on regarde sur la documentation de PHP, on remarque que ces fonctions ne tiennent pas compte de la casse. Or on peux écrire la directive javascript sans tenir compte de la casse, c'est à dire que javascript:, Javascript:, JAVASCRIPT:, JaVaScRiPt: représente exactement la même chose. Je vais réutilisé l'exemple précédent en rajoutant un filtrage de chaines pour utilise la XSS suivante :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+Javascript:alert(1)
+}}
+\vspace{0.2cm}
+
+Le code de la page est le suivant. Il faut bien noté l'utilisation de la fonction strpos pour filtrer le mot javascript du résultat de l'input :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{25}
+}}
+\vspace{0.2cm}
+
+Et en utilisant la XSS, on bypass l'ensemble des fonctions :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{26}
+}}
+\vspace{0.2cm}
+
+\subsection{XSS - Bypass htmlspecialchars et htmlentities avec les guillemets graves}
 
 \newpage
 \section{Bibliographie}
