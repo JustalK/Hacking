@@ -26,10 +26,12 @@
 \contentsline {section}{\numberline {6}CSRF - Cross-site request forgery}{13}
 \contentsline {subsection}{\numberline {6.1}Qu'est ce qu'une attaque CRSF ?}{13}
 \contentsline {section}{\numberline {7}XSS}{14}
-\contentsline {subsection}{\numberline {7.1}Simple XSS - balise script}{14}
-\contentsline {subsection}{\numberline {7.2}XSS Trick - Bypass htmlspecialchars in some cases}{14}
-\contentsline {subsection}{\numberline {7.3}XSS - Bypass htmlspecialchars et htmlentities avec simples guillemets}{15}
-\contentsline {subsection}{\numberline {7.4}XSS - Bypass htmlspecialchars et htmlentities avec espace}{16}
-\contentsline {subsection}{\numberline {7.5}XSS Trick avec UTF-7 - Bypass htmlspecialchars et htmlentities}{17}
-\contentsline {section}{\numberline {8}Bibliographie}{18}
-\contentsline {subsection}{\numberline {8.1}SMTP Injection}{18}
+\contentsline {subsection}{\numberline {7.1}XSS Test}{14}
+\contentsline {subsection}{\numberline {7.2}Simple XSS - balise script}{14}
+\contentsline {subsection}{\numberline {7.3}XSS Trick - Bypass htmlspecialchars in some cases}{15}
+\contentsline {subsection}{\numberline {7.4}XSS - Bypass htmlspecialchars et htmlentities avec simples guillemets}{15}
+\contentsline {subsection}{\numberline {7.5}XSS - Bypass htmlspecialchars et htmlentities avec espace}{17}
+\contentsline {subsection}{\numberline {7.6}XSS Trick avec UTF-7 - Bypass htmlspecialchars et htmlentities}{18}
+\contentsline {subsection}{\numberline {7.7}XSS - Bypass htmlspecialchars et htmlentities avec les directives Javascript}{18}
+\contentsline {section}{\numberline {8}Bibliographie}{20}
+\contentsline {subsection}{\numberline {8.1}SMTP Injection}{20}

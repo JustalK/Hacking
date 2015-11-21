@@ -338,6 +338,35 @@ Pour expliquer cela, il est beaucoup plus intéressant de prendre un exemple. Im
 
 \newpage
 \section{XSS}
+\subsection{XSS Test}
+Pour testé rapidement si une faille XSS est possible à un endroit ou non, on peux utiliser des chaines de test telles que les suivantes :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\vspace{0.2cm}';alert(String.fromCharCode(88,83,83))//';alert(String.fromCharCode(88,83,83))//";\\
+alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//--\\
+></SCRIPT>">'><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>
+\vspace{0.2cm}
+}}
+\vspace{0.2cm}
+
+ou encore une balise déprécié :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\vspace{0.2cm}
+<PLAINTEXT>
+\vspace{0.2cm}
+}}
+\vspace{0.2cm}
+
+Ou encore une autre version si l'espace est limité par le nombre de caractères, il faut cependant pour cette dernière analysé le code source retourné et chercher ceci " <XSS" ou "\&lt;XSS" :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\vspace{0.2cm}
+'';!--"<XSS>=\&\{()\}
+\vspace{0.2cm}
+}}
+\vspace{0.2cm}\\
+
 \subsection{Simple XSS - balise script}
 Prenons le script suivant sans aucune protection :
 \vspace{0.2cm}\\
@@ -459,6 +488,31 @@ Cette fois, il n'y a pas besoin d'effectuer un quelconque tamper sur les donnée
 
 \vspace{0.2cm}
 \subsection{XSS Trick avec UTF-7 - Bypass htmlspecialchars et htmlentities}
+
+\subsection{XSS - Bypass htmlspecialchars et htmlentities avec les directives Javascript}
+
+Comme dit plus haut, htmlspecialchars et htmlentities permettent seulement de convertir certains caractères et si l'on utilise aucun de ces caractères, ces deux fonctions deviennent inutiles. En utilisant les directives javascript, il est possible d'effectuer une XSS de la manière suivante :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+javascript:alert('XSS')
+}}
+\vspace{0.2cm}
+
+Prenons le script de test que j'utilise assez souvent depuis le début de cette section :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{23}
+}}
+\vspace{0.2cm}
+
+On obtient alors le résultat suivant :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{24}
+}}
+\vspace{0.2cm}
+
+Comme on peut le voir, les deux fonctions sont complètement inutile contre ce type de script. Suivant la fonction utilisé, il est même possible de faire des redirections de pages et donc de faire ce que l'on veut (usurpation?). 
 
 \newpage
 \section{Bibliographie}
