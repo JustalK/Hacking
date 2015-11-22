@@ -337,6 +337,42 @@ Pour expliquer cela, il est beaucoup plus intéressant de prendre un exemple. Im
 \end{itemize}
 
 \newpage
+\section{Filtrage - URL Evasion}
+\subsection{Préambule}
+Une chose amusante avec l'internet est qu'il est très facile d'oublier quelques choses, un petit détail qui pourrait permettre de faire ce que l'on souhaite interdire. Cette section en est l'exemple même. Prenons, l'exemple suivant :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{filter}
+}}
+\vspace{0.2cm}
+
+Ici, le but du développeur est d'empêcher l'utilisateur d'entrer un lien venant de google. Comme de nombreuses personnes auraient réfléchi, on aurait sans doute refuser toutes les chaines comportant le mot google sans tenir compte de la case. Ce script réalise donc cette opération via la fonction strripost. Il est donc normalement impossible de mettre le lien "www.google.fr".
+
+\subsection{Bypass de filtre URL par IP}
+
+En fait, il y a de nombreux moyens de décrire une URL, il est donc inutile de filtrer une url par un terme, comme on peux le voir ci-dessous :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+http://173.194.67.94
+}}
+\vspace{0.2cm}
+
+Toutes les adresses sur internet sont des points dans le réseau et comportent donc une adresse IP. Il en est de même pour le géant Google. On peux donc l'atteindre en entrant l'adresse ci-dessus.
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{filter1}
+}}
+\vspace{0.2cm}
+
+En cliquant sur le lien on arrive donc bien sur le lien que l'on souhaitait :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{filter2}
+}}
+\vspace{0.2cm}
+
+
+\newpage
 \section{XSS}
 \subsection{Préambule}
 A cette question, je vais encore répondre par un exemple. Je considère que c'est par la pratique que l'on apprend les fondamentaux. Imaginons que nous soyons sur un forum et un lien a été posté. Bien entendu ce lien a été trafiqué par une XSS pour obtenir le code HTML suivant :
@@ -626,7 +662,7 @@ L'ensemble des codes écrit suivant les normes UTF-8 sont retranscrit en caratè
 
 Hop là ! On passe tous les cas avec succès !\\
 
-Un autre type de forme peut être réaliser pour écrire les caractères avec UNICODE. Le code suivant marchera dans les espaces où les fonctions htmlentities ou htmlspecialchars sont manquantes :
+Un autre type de forme peut être réaliser pour écrire les caractères avec UNICODE. Le code suivant montre un bel exemple des différents encodage possible pour réaliser une alerte :
 \vspace{0.2cm}\\
 \fbox{\parbox{\textwidth}{
 {\scriptsize \&\#0000106\&\#0000097\&\#0000118\&\#0000097\&\#0000115\&\#0000099\&\#0000114\&\#0000105\&\#0000112\&\#0000116 \&\#0000058\&\#0000097\&\#0000108\&\#0000101\&\#0000114\&\#0000116\&\#0000040\&\#0000039\&\#0000088\&\#0000083 \&\#0000083\&\#0000039\&\#0000041}
@@ -634,10 +670,14 @@ Un autre type de forme peut être réaliser pour écrire les caractères avec UN
 ou encore
 \vspace{0.2cm}\\
 {\scriptsize \&\#106;\&\#97;\&\#118;\&\#97;\&\#115;\&\#99;\&\#114;\&\#105;\&\#112;\&\#116;\&\#58;\&\#97;\&\#108;\&\#101;\&\#114;\&\#116; \&\#40;\&\#39;\&\#88;\&\#83;\&\#83;\&\#39;\&\#41;}
+\vspace{0.2cm}\\
+ou encore
+\vspace{0.2cm}\\
+{\scriptsize \&\#x6A\&\#x61\&\#x76\&\#x61\&\#x73\&\#x63\&\#x72\&\#x69\&\#x70\&\#x74\&\#x3A\&\#x61\&\#x6C\&\#x65 \&\#x72\&\#x74\&\#x28\&\#x27\&\#x58\&\#x53\&\#x53\&\#x27\&\#x29}
 }}
 \vspace{0.2cm}
 
-Cependant, dans le cas là, les fonctions htmlspecialchars et htmlentities filtreront les caractères \&. L'intérêt est donc mince. 
+Cependant, dans le cas là, les fonctions htmlspecialchars et htmlentities filtreront les caractères \&. L'intérêt est donc bien mince. D'après mes recherches, ce genre d'attaque peut etre utilisé lorsque le développeur à réalisé une mauvaise fonction de filtrage. Mais dans ce cas là, pourquoi n'utiliserait-il pas les fonctions htmlspecialchars ou htmlentities ?
 
 \subsection{XSS - Bypass htmlspecialchars et htmlentities avec des espaces}
 
@@ -669,7 +709,24 @@ Ce qui permet d'obtenir le résultat suivant qui s'affichera automatiquement :
 }}
 \vspace{0.2cm}
 
+\subsection{XSS - Bypass htmlspecialchars et htmlentities avec JSFuck}
 
+JSFuck est un langage de programmation méconnu qui se base sur le noyau de javascript pour fonctionner. Pour plus d'informations concernant ce langage, je vous renvoie au site des créateurs : http://www.jsfuck.com\\
+Le langage repose sur quelques caratères qui ne sont pas filtré par les fonctions htmlspecialchars et htmlentities, il est donc très facile de faire des XSS avec ce dernier. Le seul problème est que cela demande un nombre de caractère important, il est donc impossible de l'utiliser sur des requêtes GET. Sur le site précédemment copier/coller la chaine affiché qui est normalement celle du alert(1).\\
+
+Vous devriez obtenir une très longue chaine de 1227 caractères qui correspondent à notre simple petit script. On peux alors utiser le script suivant :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+javascript:[][(![]...et la suite de la chaine
+}}
+\vspace{0.2cm}
+	
+Ce qui permet d'obtenir le résultat suivant :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{xss5}
+}}
+\vspace{0.2cm}
 
 \newpage
 \section{Bibliographie}
