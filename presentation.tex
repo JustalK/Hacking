@@ -338,7 +338,7 @@ Pour expliquer cela, il est beaucoup plus intéressant de prendre un exemple. Im
 
 \newpage
 \section{XSS}
-\subsection{Que cela permet-il de faire ?}
+\subsection{Préambule}
 A cette question, je vais encore répondre par un exemple. Je considère que c'est par la pratique que l'on apprend les fondamentaux. Imaginons que nous soyons sur un forum et un lien a été posté. Bien entendu ce lien a été trafiqué par une XSS pour obtenir le code HTML suivant :
 \vspace{0.2cm}\\
 \fbox{\parbox{\textwidth}{
@@ -366,8 +366,16 @@ Lorsque l'utilisateur cliquera dessus, ce lien le dirigera vers une page interne
 }}
 \vspace{0.2cm}
 
-Ce qui permet alors d'obtenir toutes les informations du cookie dans un fichier texte puis de rediriger l'utilisateur vers le moteur de recherche google. Puis on peux ensuite lire tranquillement le document texte et avec des outils comme Cookie Manager+, on peux alors trafiquer ces propres cookies pour imiter celui de l'utilisateur. Ceci est le concept de base de la faille XSS mais il est possible de pousser le vice pour faire de nombreuses autres choses bien plus dangereuse et intéressante.
+Ce qui permet alors d'obtenir toutes les informations du cookie dans un fichier texte puis de rediriger l'utilisateur vers le moteur de recherche google. Puis on peux ensuite lire tranquillement le document texte et avec des outils comme Cookie Manager+, on peux alors trafiquer ces propres cookies pour imiter celui de l'utilisateur. Ceci est le concept de base de la faille XSS mais il est possible de pousser le vice pour faire de nombreuses autres choses bien plus dangereuse et intéressante.\\
 
+Pour l'ensemble des exemples ci-dessous, j'utiliserais un seul script qui permet de tester rapidement tous les cas possibles. C'est à dire que l'on peux tester à la fois les cas contenant des guillemets simples ou double, les cas qui utilisent les fonctions htmlentities ou encore htmlspecialchars.
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\vspace{0.2cm}
+\includegraphics[width=\textwidth]{xss}
+\vspace{0.2cm}
+}}
+\vspace{0.2cm}\\
 
 \subsection{Test de l'existence d'une faille XSS de manière rapide}
 Pour testé rapidement si une faille XSS est possible à un endroit ou non, on peux utiliser des chaines de test telles que les suivantes :
@@ -487,37 +495,6 @@ On obtient alors le résultat suivant :
 \includegraphics[width=\textwidth]{20}
 }}
 \vspace{0.2cm}
-\subsection{XSS - Bypass htmlspecialchars et htmlentities avec espace}
-
-Dans la continuité du chapitre précédent, j'ai rencontré de nombreux code sur internet qui ressemblait à ceci afin de par exemple pré remplir un champ :
-\vspace{0.2cm}\\
-\fbox{\parbox{\textwidth}{
-echo "<input value={\color{blue}"}.htmlspecialchars(\$\_POST['XSS']).{\color{blue}"}>";
-}}
-\vspace{0.2cm}
-Encore une fois, il est possible ici de reproduire une injection XSS comme précédemment. Par exemple, une injection comme celle-ci :
-\vspace{0.2cm}\\
-\fbox{\parbox{\textwidth}{
-XSS autofocus onfocus=alert(1)
-}}
-\vspace{0.2cm}
-Les espaces feront que le champ value sera égale à XSS puis l'autofocus et onfocus seront donc des éléments de la balise. De la même manière que précédemment, l'autofocus permettra d'exécuter automatiquement le script situé dans le champ onfocus. On s'affranchit ainsi de la restriction de la balise.
-
-Effectuons un petit exemple avec la fonction onmouseover :
-\vspace{0.2cm}\\
-\fbox{\parbox{\textwidth}{
-\includegraphics[width=\textwidth]{21}
-}}
-\vspace{0.2cm}
-
-Cette fois, il n'y a pas besoin d'effectuer un quelconque tamper sur les données, on obtient donc :
-\vspace{0.2cm}\\
-\fbox{\parbox{\textwidth}{
-\includegraphics[width=\textwidth]{22}
-}}
-\vspace{0.2cm}
-
-\vspace{0.2cm}
 \subsection{XSS - Bypass htmlspecialchars et htmlentities avec UTF-7}
 
 \subsection{XSS - Bypass htmlspecialchars et htmlentities avec les directives Javascript}
@@ -601,6 +578,98 @@ Et en utilisant la XSS précédent, on peux cette fois utiliser des guillemets :
 \includegraphics[width=\textwidth]{28}
 }}
 \vspace{0.2cm}
+
+\subsection{XSS - Avec les malformations de balise et l'auto-correction des navigateurs}
+
+Une chose de vraiment pratique avec les navigateurs, c'est qu'ils aiment corriger le html des pages internet sur lesquelles les utilisateurs arrivent. Maintenant, si sur un forum ou n'importe quelle plateforme d'échange il est possible d'écrire ou de modifier certaines balises html, des failles XSS peuvent être utiliser. Par exemple, la balise de lien <a> en est un parfait exemple. Si le tag HREF est manquant, les navigateurs auront tendance à rajouter les guillemets après le premier égale trouvé. C'est très pratique et permet de se servir des HTML DOM event :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+<a onmousemove=alert(1)>Latsuj</a>
+}}
+\vspace{0.2cm}
+
+Si maintenant, on injecte cela dans notre exemple et que l'on passe la souris sur le resultat du premier lien, on obtiens notre message d'alerte.
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{xss1}
+}}
+\vspace{0.2cm}
+
+Le problème ici est que nous sommes bloqué dans la balise sur lequel le script est posé et il n'y a aucune manière de sortir de cette dernière. Cependant, il y a tout de même une bonne nouvelle, le texte ne sera pas considéré comme un lien, cela est donc complètement invisible si la personne ne fait pas attention au source code.
+
+\subsection{XSS - Bypass htmlspecialchars et htmlentities avec l'encoding UTF-8}
+
+En javascript, il existe une methode bien pratique pour convertir des valeurs unicode en caractère : fromCharCode(). Pour plus d'information sur cette fonction, la documentation de w3schools est largement suffisante : http://www.w3schools.com/jsref/jsref\_fromCharCode.asp\\
+
+Posons le problème suivant, je veux afficher du texte dans mon "alert". Si on essaye de rentrer ce code de la manière ci-dessous dans notre code, dans certains cas, cela sera inutile :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+javascript:alert('Latsuj');\\
+ou encore\\
+javascript:alert("Latsuj");
+}}
+\vspace{0.2cm}
+
+Dans le premier cas, vous remarquerez que cela ne marche pas dans le cas 1 quand il n'y pas de protection. Et dans le deuxième cas, vous remarquerez que cela ne marche pas dans le cas 2 lorsque les fonctions de protections sont actives. Sur un vrai site, vous ignorez les protections et la manière dont le site est codé, il faut donc testé de nombreuses choses. Pour gagner du temps la méthode fromCharCode est très utile. Entrons maintenant :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+javascript:alert(String.fromCharCode(76,97,116,115,117,106));
+}}
+\vspace{0.2cm}
+
+L'ensemble des codes écrit suivant les normes UTF-8 sont retranscrit en caratères. Pour plus d'information sur UTF-8 et sur les différents code : https://en.wikipedia.org/wiki/UTF-8\\
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{xss2}
+}}
+\vspace{0.2cm}
+
+Hop là ! On passe tous les cas avec succès !\\
+
+Un autre type de forme peut être réaliser pour écrire les caractères avec UNICODE. Le code suivant marchera dans les espaces où les fonctions htmlentities ou htmlspecialchars sont manquantes :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+{\scriptsize \&\#0000106\&\#0000097\&\#0000118\&\#0000097\&\#0000115\&\#0000099\&\#0000114\&\#0000105\&\#0000112\&\#0000116 \&\#0000058\&\#0000097\&\#0000108\&\#0000101\&\#0000114\&\#0000116\&\#0000040\&\#0000039\&\#0000088\&\#0000083 \&\#0000083\&\#0000039\&\#0000041}
+\vspace{0.2cm}\\
+ou encore
+\vspace{0.2cm}\\
+{\scriptsize \&\#106;\&\#97;\&\#118;\&\#97;\&\#115;\&\#99;\&\#114;\&\#105;\&\#112;\&\#116;\&\#58;\&\#97;\&\#108;\&\#101;\&\#114;\&\#116; \&\#40;\&\#39;\&\#88;\&\#83;\&\#83;\&\#39;\&\#41;}
+}}
+\vspace{0.2cm}
+
+Cependant, dans le cas là, les fonctions htmlspecialchars et htmlentities filtreront les caractères \&. L'intérêt est donc mince. 
+
+\subsection{XSS - Bypass htmlspecialchars et htmlentities avec des espaces}
+
+Sur certains site, il n'y parfois aucun encoding sur les espaces, il n'y a pas de guillemets qui se succède ou encore aucun filtre sur les guillemets simple. Ce qui permet d'injecter du javascript avec un simple espace et les HTML DOM event, comme l'exemple ci-dessous :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+XSS autofocus onfocus=alert(1)
+}}
+\vspace{0.2cm}
+
+Les espaces feront que le champ href sera égale à XSS puis l'autofocus et onfocus seront donc des éléments de la balise. Ainsi l'autofocus permettra d'exécuter automatiquement le script situé dans le champ onfocus. On s'affranchit ainsi de la restriction de la balise. Effectuons un petit exemple avec la fonction onmouseover suivante : XSS onmouseover=alert(1)
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{xss3}
+}}
+\vspace{0.2cm}
+
+Une autre manière de procéder est d'utiliser le tag onerror dans une image afin de lancer automatiquement les scripts contenus dans les balises IMG. Par exemple :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+SRC=\# onerror=alert(1)
+}}
+\vspace{0.2cm}
+
+Ce qui permet d'obtenir le résultat suivant qui s'affichera automatiquement :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{xss4}
+}}
+\vspace{0.2cm}
+
+
 
 \newpage
 \section{Bibliographie}

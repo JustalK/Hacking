@@ -26,15 +26,17 @@
 \contentsline {section}{\numberline {6}CSRF - Cross-site request forgery}{13}
 \contentsline {subsection}{\numberline {6.1}Qu'est ce qu'une attaque CRSF ?}{13}
 \contentsline {section}{\numberline {7}XSS}{14}
-\contentsline {subsection}{\numberline {7.1}Que cela permet-il de faire ?}{14}
-\contentsline {subsection}{\numberline {7.2}Test de l'existence d'une faille XSS de mani\IeC {\`e}re rapide}{14}
-\contentsline {subsection}{\numberline {7.3}Simple XSS - balise script}{14}
-\contentsline {subsection}{\numberline {7.4}XSS - Bypass htmlspecialchars par erreurs avec la balise SVG}{15}
-\contentsline {subsection}{\numberline {7.5}XSS - Bypass htmlspecialchars et htmlentities avec simples guillemets}{16}
-\contentsline {subsection}{\numberline {7.6}XSS - Bypass htmlspecialchars et htmlentities avec espace}{17}
-\contentsline {subsection}{\numberline {7.7}XSS - Bypass htmlspecialchars et htmlentities avec UTF-7}{18}
-\contentsline {subsection}{\numberline {7.8}XSS - Bypass htmlspecialchars et htmlentities avec les directives Javascript}{18}
-\contentsline {subsection}{\numberline {7.9}XSS - Bypass htmlspecialchars et htmlentities et les filtrages de chaines}{19}
-\contentsline {subsection}{\numberline {7.10}XSS - Bypass htmlspecialchars et htmlentities avec les accents graves}{20}
-\contentsline {section}{\numberline {8}Bibliographie}{22}
-\contentsline {subsection}{\numberline {8.1}SMTP Injection}{22}
+\contentsline {subsection}{\numberline {7.1}Pr\IeC {\'e}ambule}{14}
+\contentsline {subsection}{\numberline {7.2}Test de l'existence d'une faille XSS de mani\IeC {\`e}re rapide}{15}
+\contentsline {subsection}{\numberline {7.3}Simple XSS - balise script}{15}
+\contentsline {subsection}{\numberline {7.4}XSS - Bypass htmlspecialchars par erreurs avec la balise SVG}{16}
+\contentsline {subsection}{\numberline {7.5}XSS - Bypass htmlspecialchars et htmlentities avec simples guillemets}{17}
+\contentsline {subsection}{\numberline {7.6}XSS - Bypass htmlspecialchars et htmlentities avec UTF-7}{18}
+\contentsline {subsection}{\numberline {7.7}XSS - Bypass htmlspecialchars et htmlentities avec les directives Javascript}{18}
+\contentsline {subsection}{\numberline {7.8}XSS - Bypass htmlspecialchars et htmlentities et les filtrages de chaines}{19}
+\contentsline {subsection}{\numberline {7.9}XSS - Bypass htmlspecialchars et htmlentities avec les accents graves}{20}
+\contentsline {subsection}{\numberline {7.10}XSS - Avec les malformations de balise et l'auto-correction des navigateurs}{21}
+\contentsline {subsection}{\numberline {7.11}XSS - Bypass htmlspecialchars et htmlentities avec l'encoding UTF-8}{22}
+\contentsline {subsection}{\numberline {7.12}XSS - Bypass htmlspecialchars et htmlentities avec des espaces}{23}
+\contentsline {section}{\numberline {8}Bibliographie}{25}
+\contentsline {subsection}{\numberline {8.1}SMTP Injection}{25}
