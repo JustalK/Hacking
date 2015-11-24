@@ -316,7 +316,7 @@ Pour se protéger contre ce type d'attaque, il suffit de vérifier que les infor
 
 \newpage
 \section{CSRF - Cross-site request forgery}
-\subsection{Qu'est ce qu'une attaque CRSF ?}
+\subsection{Qu'est ce qu'une attaque CSRF ?}
 Pour expliquer cela, il est beaucoup plus intéressant de prendre un exemple. Imaginons la scène suivante :\\
 \begin{itemize}
 \item Une personne s'enregistre à sa banque normalement\\
@@ -335,6 +335,71 @@ Pour expliquer cela, il est beaucoup plus intéressant de prendre un exemple. Im
 \item Lorsque l'utilisateur arrive sur la page, son navigateur lit la page et va exécuter le code. Ce qui va résulter à un transfert de 100 euros à un certain compte bancaire\\
 \item Comme l'utilisateur a un cookie avec une session valide, la requête émis via le formulaire va etre accepté par le site de la banque
 \end{itemize}
+\subsection{Exemple}
+
+Nous n'allons bien évidement pas testé ce type d'attaque sur un site de banque. Nous allons nous servir de deux petits fichiers PHP afin d'illustrer parfaitement cette attaque. Nous allons donc simuler un site avec une authentification via SESSION et un petit bouton qui permet de faire des dons de 120 dollars :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{csrf}
+}}
+\vspace{0.2cm}
+
+Sous Firefox, nous obtenons la chose suivante :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{csrf1}
+}}
+\vspace{0.2cm}
+
+Sous Cookie Manager+, j'ai regardé qu'une session était bel et bien crée. J'ai donc un système de session comme on pourrait le trouver sur n'importe quel site. Maintenant passons, au niveau de l'attaque. Si l'on regarde le source code pour savoir ce qu'effectue le bouton "don", on observe ceci :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+<form action="" method="post">\\
+\hspace*{0.6cm}<input name="amount" value="120" type="hidden">\\
+\hspace*{0.6cm}<input name="submit" value="Don" type="submit">\\
+</form>
+}}
+\vspace{0.2cm}
+
+On remarque donc que la valeur est passé par un input hidden. On va donc imité ce script sur une page php hebergé sur un autre site :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{csrf2}
+}}
+\vspace{0.2cm}
+
+Comme on peut le voir, j'ai redirigé l'action sur la page qui effectue le script et j'ai aussi automatisé le script afin que l'utilisateur que je souhaite piégé n'est qu'à ce rendre sur la page. Si on test notre page sans session valide, on obtient le résultat suivant :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{csrf3}
+}}
+\vspace{0.2cm}
+
+Ce résultat est normal. Maintenant si un utilisateur se connecte sur le site qui crée la session puisse arrive sur notre page piégé, l'opération de don se lancera automatiquement avec une valeur modifié :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{csrf4}
+}}
+\vspace{0.2cm}
+
+\subsection{Protection CSRF par HTTP\_REFERER}
+
+Il est bien entendu possible de se protéger contre ce type d'attaque, la manière la plus simple mais qui comporte un risque en cas de XSS sur le site est de vérifier l'origine de la requete alias le REFERER. On va donc changer un peu notre script précédent et rajouter ceci :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+if(\$\_SERVER['HTTP\_REFERER'] == "http://localhost/Hack/index3.php") \{\\
+\hspace*{0.6cm}Some code...\\
+\}
+}}
+\vspace{0.2cm}
+
+Cette fois lorsque nous seront connecté et essayerons de nous connecter, nous arriverons sur le lien suivant :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{csrf5}
+}}
+\vspace{0.2cm}
+
 
 \newpage
 \section{Filtrage - URL Evasion}
@@ -349,9 +414,27 @@ Une chose amusante avec l'Internet est qu'il est très facile d'oublier quelques
 
 Ici, le but du développeur est d'empêcher l'utilisateur d'entrer un lien venant de google. Comme de nombreuses personnes l'auraient certainement fait, on refuse toutes les chaines comportant le mot google sans tenir compte de la case. Ce script réalise donc l'opération attendue via la fonction strripost(). Il est donc normalement impossible de mettre le lien "www.google.fr". Hehe !
 
+\subsection{Bypass de filtre URL par usage de tabulation}
+
+Les navigateurs à ma grande surprise ont tendance à ne pas tenir compte des tabulations dans certaines balises. Il est donc possible de bypasser ce filtre en rentrant l'adresse de "google" avec une tabulation histoire de ne pas se faire detecter :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+https://www.goo	gle.fr
+}}
+\vspace{0.2cm}
+
+Notons que cette manière de faire marche parfois avec un espace mais cela est plus rare. 
+
 \subsection{Bypass de filtre URL par URL shorter}
 
-\subsection{Bypass de filtre URL par hostname IP}
+Depuis quelques années et surtout depuis la grande utilisation de twitter, il existe de nombreuses manières de raccourcir un lien. Lorsque l'on procède ainsi, le lien est généralement complètement offusquer. Par exemple, on peux utiliser celui même de google (www.goo.gl) pour offusquer le lien de google. J'obtient le résultat suivant qui bypass le filtre :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+https://goo.gl/HVM91q
+}}
+\vspace{0.2cm}
+
+Comme le terme google n'est pas contenu dans la chaine, on peut entrer ce lien.
 
 \subsection{Bypass de filtre URL par IP}
 
@@ -382,6 +465,18 @@ En cliquant sur le lien on arrive donc bien sur le lien que l'on souhaitait :
 \includegraphics[width=\textwidth]{filter2}
 }}
 \vspace{0.2cm}
+
+\subsection{Bypass de filtre URL par l'adresse de la machine IP}
+
+Une fonction bien pratique de windows n'est autre que NSLOOKUP. Cette fonction permet d'obtenir très rapidement le DNS (nom de domaine en français) ainsi que l'adresse de ce dernier. Généralement l'adresse obtenu n'a plus aucun rapport avec le lien de base, ce qui permet de passer certains filtres :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{filter4}
+}}
+\vspace{0.2cm}
+
+On obtient donc une adresse : wi-in-f94.1e100.net\\
+Cette dernière lorsque rentré dans un navigateur nous amène directement sur le site de google.fr et permet donc de passer encore une fois le filtre.
 
 \subsection{Bypass de filtre URL par encodage Dword}
 
