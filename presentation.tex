@@ -339,14 +339,19 @@ Pour expliquer cela, il est beaucoup plus intéressant de prendre un exemple. Im
 \newpage
 \section{Filtrage - URL Evasion}
 \subsection{Préambule}
-Une chose amusante avec l'internet est qu'il est très facile d'oublier quelques choses, un petit détail qui pourrait permettre de faire ce que l'on souhaite interdire. Cette section en est l'exemple même. Prenons, l'exemple suivant :
+Pour cette faille, je vais vous raconter une petite histoire pour vous mettre dans le contexte. Un jour, un de mes amis a claqué à ma porte pour me demander mon avis sur un de ses souhaits. Il voulait bloquer la possibilité aux utilisateurs d'utiliser la fonction lien du forum pour mettre des liens vers un autre forum. Il est donc venu me voir avec un code assez amusant qui filtrait automatiquement toutes les chaines contenant le domaine du site. C'est à cet instant que j'ai rigolé !\\ 
+Une chose amusante avec l'Internet est qu'il est très facile d'oublier quelques choses, un petit détail qui pourrait permettre de faire ce que l'on souhaite justement interdire. Prenons, l'exemple suivant :
 \vspace{0.2cm}\\
 \fbox{\parbox{\textwidth}{
 \includegraphics[width=\textwidth]{filter}
 }}
 \vspace{0.2cm}
 
-Ici, le but du développeur est d'empêcher l'utilisateur d'entrer un lien venant de google. Comme de nombreuses personnes auraient réfléchi, on aurait sans doute refuser toutes les chaines comportant le mot google sans tenir compte de la case. Ce script réalise donc cette opération via la fonction strripost. Il est donc normalement impossible de mettre le lien "www.google.fr".
+Ici, le but du développeur est d'empêcher l'utilisateur d'entrer un lien venant de google. Comme de nombreuses personnes l'auraient certainement fait, on refuse toutes les chaines comportant le mot google sans tenir compte de la case. Ce script réalise donc l'opération attendue via la fonction strripost(). Il est donc normalement impossible de mettre le lien "www.google.fr". Hehe !
+
+\subsection{Bypass de filtre URL par URL shorter}
+
+\subsection{Bypass de filtre URL par hostname IP}
 
 \subsection{Bypass de filtre URL par IP}
 
@@ -354,6 +359,13 @@ En fait, il y a de nombreux moyens de décrire une URL, il est donc inutile de f
 \vspace{0.2cm}\\
 \fbox{\parbox{\textwidth}{
 http://173.194.67.94
+}}
+\vspace{0.2cm}
+
+Pour trouver l'adresse IP d'un site internet, rien de plus simple. Firebug est là pour ça :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{filter3}
 }}
 \vspace{0.2cm}
 
@@ -371,6 +383,72 @@ En cliquant sur le lien on arrive donc bien sur le lien que l'on souhaitait :
 }}
 \vspace{0.2cm}
 
+\subsection{Bypass de filtre URL par encodage Dword}
+
+Cette manière de faire part du principe de l'encodage de l'ip et du langage de la machine. Une adresse IP peut etre écrite d'une autre manière. Dans l'exemple du chapitre précédent, on obtenait l'adresse IP (173.194.67.94) que l'on peut transformé en Dword :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+(173*256)+194)*256+67)*256+94 = 2915189598
+}}
+\vspace{0.2cm}
+
+On obtient donc un simple chiffre et surtout un nouveau moyen d'offusquer notre url :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+http://2915189598
+}}
+\vspace{0.2cm}
+
+Notons enfin que a ce dword, on peux ajouter un multiple de 256\^4, ce qui donne un nombre de possibilité infini pour passer outre ce filtre.
+
+\subsection{Bypass de filtre URL par encodage hexadecimal}
+
+Toujours sur le principe de conversation, il est aussi possible d'utiliser l'encodage hexadecimal pour une adresse IP. Reprenons notre adresse IP de google : 173.194.67.94
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+173 en base 10 = 10101101 en base 2 = (1*8+0*4+1*2+0*1) (1*8+1*4+0*2+1*1) =  AD\\
+194 en base 10 = C2\\
+67 en base 10 = 43\\
+94 en base 10 = 5E
+}}
+\vspace{0.2cm}
+
+On obtient donc l'adresse IP suivante en hexadecimal qui permet encore une fois de bypasser le filtre :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+http://0xAD.0xC2.0x43.0x5E
+}}
+\vspace{0.2cm}
+
+\subsection{Bypass de filtre URL par encodage octal}
+
+De la même manière, il est aussi possible de coder en octal l'adresse IP. Si l'on reprend l'adresse IP de notre superbe site google : 173.194.67.94
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+173 en base 10 = 10101101 en base 8 = (0*4+1*2+0*1) (1*4+0*2+1*1) (1*4+0*2+1*1) =  255\\
+194 en base 10 = 302\\
+67 en base 10 = 103\\
+94 en base 10 = 136
+}}
+\vspace{0.2cm}
+
+On obtient donc l'adresse IP suivante en octal cette fois-ci qui permet encore une fois de bypasser le filtre :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+http://0255.0302.0103.0136
+}}
+\vspace{0.2cm}
+
+\subsection{Bypass de filtre URL par encodage URL}
+
+Les navigateurs remplace les caractères encodés automatiquement. C'est pourquoi, si a la place d'écrire directement www.google.com mais le code suivante :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+http://\%77\%77\%77\%2E\%67\%6F\%6F\%67\%6C\%65\%2E\%66\%72
+}}
+\vspace{0.2cm} 
+
+On passera a travers un filtre qui cherchera la chaine "google". A noter que cette manière de faire ne fonctionne pas dans tous les navigateurs. Pour encoder une chaine, le lien suivante donne un bon tableau d'encodage : http://www.w3schools.com/tags/ref\_urlencode.asp
 
 \newpage
 \section{XSS}
