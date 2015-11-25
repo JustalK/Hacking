@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.26)  25 NOV 2015 16:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.26)  25 NOV 2015 20:40
 entering extended mode
 **presentation.tex
 (presentation.tex
@@ -677,629 +677,731 @@ Underfull \hbox (badness 10000) in paragraph at lines 304--312
 
  []
 
-[12 <./10.png>] [13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 324--325
+[12 <./10.png>] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--329
+Underfull \hbox (badness 10000) in paragraph at lines 323--325
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 329--330
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
 
  []
 
 
-Overfull \hbox (36.79999pt too wide) in paragraph at lines 330--339
+Overfull \hbox (36.79999pt too wide) in paragraph at lines 326--335
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--339
+Underfull \hbox (badness 10000) in paragraph at lines 326--335
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
  []
 
-<csrf.png, id=55, 813.0375pt x 751.80875pt>
+<csrf.png, id=52, 813.0375pt x 751.80875pt>
 File: csrf.png Graphic file (type png)
  <use csrf.png>
-Package pdftex.def Info: csrf.png used on input line 348.
+Package pdftex.def Info: csrf.png used on input line 344.
 (pdftex.def)             Requested size: 430.00462pt x 397.6193pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 344--350
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 340--346
 []
  []
 
-[15] <csrf1.png, id=60, 1860.9525pt x 985.6825pt>
+[14] <csrf1.png, id=57, 1860.9525pt x 985.6825pt>
 File: csrf1.png Graphic file (type png)
  <use csrf1.png>
-Package pdftex.def Info: csrf1.png used on input line 355.
+Package pdftex.def Info: csrf1.png used on input line 351.
 (pdftex.def)             Requested size: 430.00462pt x 227.75502pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 351--357
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 347--353
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 358--367
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 354--363
 []
  []
 
-[16 <./csrf.png> <./csrf1.png>] <csrf2.png, id=64, 564.1075pt x 242.9075pt>
+[15 <./csrf.png> <./csrf1.png>] <csrf2.png, id=61, 564.1075pt x 242.9075pt>
 File: csrf2.png Graphic file (type png)
 
 <use csrf2.png>
-Package pdftex.def Info: csrf2.png used on input line 372.
+Package pdftex.def Info: csrf2.png used on input line 368.
 (pdftex.def)             Requested size: 430.00462pt x 185.16386pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 368--374
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 364--370
 []
  []
 
-<csrf3.png, id=65, 1860.9525pt x 985.6825pt>
+<csrf3.png, id=62, 1860.9525pt x 985.6825pt>
 File: csrf3.png Graphic file (type png)
  <use csrf3.png>
-Package pdftex.def Info: csrf3.png used on input line 379.
+Package pdftex.def Info: csrf3.png used on input line 375.
 (pdftex.def)             Requested size: 430.00462pt x 227.75502pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 375--381
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 371--377
 []
  []
 
-<csrf4.png, id=66, 1860.9525pt x 985.6825pt>
+<csrf4.png, id=63, 1860.9525pt x 985.6825pt>
 File: csrf4.png Graphic file (type png)
  <use csrf4.png>
-Package pdftex.def Info: csrf4.png used on input line 386.
+Package pdftex.def Info: csrf4.png used on input line 382.
 (pdftex.def)             Requested size: 430.00462pt x 227.75502pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 382--388
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 378--384
 []
  []
 
-[17 <./csrf2.png> <./csrf3.png>]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 391--399
+[16 <./csrf2.png> <./csrf3.png>]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 387--395
 []
  []
 
-<csrf5.png, id=70, 1860.9525pt x 985.6825pt>
+<csrf5.png, id=67, 1860.9525pt x 985.6825pt>
 File: csrf5.png Graphic file (type png)
  <use csrf5.png>
-Package pdftex.def Info: csrf5.png used on input line 404.
+Package pdftex.def Info: csrf5.png used on input line 400.
 (pdftex.def)             Requested size: 430.00462pt x 227.75502pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 400--406
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 396--402
 []
  []
 
-[18 <./csrf4.png> <./csrf5.png>] <filter.png, id=74, 661.47125pt x 273.02pt>
+[17 <./csrf4.png> <./csrf5.png>] <filter.png, id=71, 661.47125pt x 273.02pt>
 File: filter.png Graphic file (type png)
 
 <use filter.png>
-Package pdftex.def Info: filter.png used on input line 416.
+Package pdftex.def Info: filter.png used on input line 412.
 (pdftex.def)             Requested size: 430.00462pt x 177.48172pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 411--418
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 407--414
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 423--429
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 419--425
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 434--440
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 430--436
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 445--451
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 441--447
 []
  []
 
-[19 <./filter.png>] <filter3.png, id=79, 1847.90375pt x 984.67876pt>
+[18 <./filter.png>] <filter3.png, id=75, 1847.90375pt x 984.67876pt>
 File: filter3.png Graphic file (type png)
 
 <use filter3.png>
-Package pdftex.def Info: filter3.png used on input line 456.
+Package pdftex.def Info: filter3.png used on input line 452.
 (pdftex.def)             Requested size: 430.00462pt x 229.13077pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 452--458
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 448--454
 []
  []
 
-<filter1.png, id=80, 1862.96pt x 985.6825pt>
+<filter1.png, id=76, 1862.96pt x 985.6825pt>
 File: filter1.png Graphic file (type png)
  <use filter1.png>
-Package pdftex.def Info: filter1.png used on input line 463.
+Package pdftex.def Info: filter1.png used on input line 459.
 (pdftex.def)             Requested size: 430.00462pt x 227.51437pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 459--465
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 455--461
 []
  []
 
-<filter2.png, id=81, 1862.96pt x 985.6825pt>
+<filter2.png, id=77, 1862.96pt x 985.6825pt>
 File: filter2.png Graphic file (type png)
  <use filter2.png>
-Package pdftex.def Info: filter2.png used on input line 470.
+Package pdftex.def Info: filter2.png used on input line 466.
 (pdftex.def)             Requested size: 430.00462pt x 227.51437pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 466--472
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 462--468
 []
  []
 
-[20 <./filter3.png> <./filter1.png>]
-<filter4.png, id=85, 679.53876pt x 343.2825pt>
+[19 <./filter3.png> <./filter1.png>]
+<filter4.png, id=82, 679.53876pt x 343.2825pt>
 File: filter4.png Graphic file (type png)
  <use filter4.png>
-Package pdftex.def Info: filter4.png used on input line 479.
+Package pdftex.def Info: filter4.png used on input line 475.
 (pdftex.def)             Requested size: 430.00462pt x 217.22243pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 475--481
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 471--477
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 487--493
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 483--489
 []
  []
 
-[21 <./filter2.png> <./filter4.png>]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 494--500
-[]
- []
-
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 505--514
+[20 <./filter2.png> <./filter4.png>]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 490--496
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 515--521
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 501--510
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 524--533
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 511--517
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 534--540
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 520--529
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 543--549
-[]
- []
-
-[22]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 555--565
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 530--536
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 566--581
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 539--545
+[]
+ []
+
+[21] <sql8.png, id=89, 582.175pt x 296.10625pt>
+File: sql8.png Graphic file (type png)
+ <use sql8.png>
+Package pdftex.def Info: sql8.png used on input line 560.
+(pdftex.def)             Requested size: 430.00462pt x 218.71306pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 554--562
+[]
+ []
+
+<sql1.png, id=90, 347.2975pt x 330.23375pt>
+File: sql1.png Graphic file (type png)
+ <use sql1.png>
+Package pdftex.def Info: sql1.png used on input line 569.
+(pdftex.def)             Requested size: 215.0023pt x 204.4455pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 563--571
+[]
+ []
+
+<sql2.png, id=91, 811.03pt x 348.30125pt>
+File: sql2.png Graphic file (type png)
+ <use sql2.png>
+Package pdftex.def Info: sql2.png used on input line 578.
+(pdftex.def)             Requested size: 430.00462pt x 184.67319pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 574--580
+[]
+ []
+
+[22 <./sql8.png> <./sql1.png>] <sql3.png, id=95, 992.70876pt x 82.3075pt>
+File: sql3.png Graphic file (type png)
+
+<use sql3.png>
+Package pdftex.def Info: sql3.png used on input line 585.
+(pdftex.def)             Requested size: 430.00462pt x 35.65276pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 581--587
+[]
+ []
+
+<sql4.png, id=96, 993.7125pt x 132.495pt>
+File: sql4.png Graphic file (type png)
+ <use sql4.png>
+Package pdftex.def Info: sql4.png used on input line 592.
+(pdftex.def)             Requested size: 430.00462pt x 57.33362pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 588--594
+[]
+ []
+
+<sql5.png, id=97, 993.7125pt x 132.495pt>
+File: sql5.png Graphic file (type png)
+ <use sql5.png>
+Package pdftex.def Info: sql5.png used on input line 599.
+(pdftex.def)             Requested size: 430.00462pt x 57.33362pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 595--601
+[]
+ []
+
+<sql6.png, id=98, 811.03pt x 348.30125pt>
+File: sql6.png Graphic file (type png)
+ <use sql6.png>
+Package pdftex.def Info: sql6.png used on input line 610.
+(pdftex.def)             Requested size: 430.00462pt x 184.67319pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 606--612
+[]
+ []
+
+[23 <./sql2.png> <./sql3.png> <./sql4.png> <./sql5.png>]
+<sql7.png, id=102, 993.7125pt x 132.495pt>
+File: sql7.png Graphic file (type png)
+ <use sql7.png>
+Package pdftex.def Info: sql7.png used on input line 617.
+(pdftex.def)             Requested size: 430.00462pt x 57.33362pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 613--619
+[]
+ []
+
+[24 <./sql6.png> <./sql7.png>]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 623--633
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--583
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 634--649
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 650--651
 
  []
 
-<xss.png, id=92, 1043.9pt x 739.76375pt>
+<xss.png, id=106, 1043.9pt x 739.76375pt>
 File: xss.png Graphic file (type png)
  <use xss.png>
-Package pdftex.def Info: xss.png used on input line 590.
+Package pdftex.def Info: xss.png used on input line 658.
 (pdftex.def)             Requested size: 430.00462pt x 304.72737pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 584--592
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 652--660
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 584--592
+Underfull \hbox (badness 10000) in paragraph at lines 652--660
 
  []
 
-[23]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 594--603
+[25]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 662--671
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 604--612
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 672--680
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 613--621
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 681--689
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 613--621
+Underfull \hbox (badness 10000) in paragraph at lines 681--689
 
  []
 
-<12.png, id=96, 389.455pt x 124.465pt>
+<12.png, id=111, 389.455pt x 124.465pt>
 File: 12.png Graphic file (type png)
  <use 12.png>
-Package pdftex.def Info: 12.png used on input line 629.
+Package pdftex.def Info: 12.png used on input line 697.
 (pdftex.def)             Requested size: 215.0023pt x 68.71045pt.
 
-<13.png, id=97, 326.21875pt x 87.32625pt>
+<13.png, id=112, 326.21875pt x 87.32625pt>
 File: 13.png Graphic file (type png)
  <use 13.png>
-Package pdftex.def Info: 13.png used on input line 637.
+Package pdftex.def Info: 13.png used on input line 705.
 (pdftex.def)             Requested size: 171.99922pt x 46.04417pt.
 
-<14.png, id=98, 240.9pt x 142.5325pt>
+<14.png, id=113, 240.9pt x 142.5325pt>
 File: 14.png Graphic file (type png)
  <use 14.png>
-Package pdftex.def Info: 14.png used on input line 645.
+Package pdftex.def Info: 14.png used on input line 713.
 (pdftex.def)             Requested size: 215.0023pt x 127.21236pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 623--646
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 691--714
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 623--646
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 691--714
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 623--646
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 691--714
 [] 
  []
 
-[24 <./xss.png>] <15.png, id=102, 779.91376pt x 241.90375pt>
+[26 <./xss.png>] <15.png, id=117, 779.91376pt x 241.90375pt>
 File: 15.png Graphic file (type png)
  <use 15.png>
-Package pdftex.def Info: 15.png used on input line 653.
+Package pdftex.def Info: 15.png used on input line 721.
 (pdftex.def)             Requested size: 387.00153pt x 120.03247pt.
 
-<16.png, id=103, 499.8675pt x 63.23625pt>
+<16.png, id=118, 499.8675pt x 63.23625pt>
 File: 16.png Graphic file (type png)
  <use 16.png>
-Package pdftex.def Info: 16.png used on input line 661.
+Package pdftex.def Info: 16.png used on input line 729.
 (pdftex.def)             Requested size: 215.0023pt x 27.19876pt.
 
-<17.png, id=104, 240.9pt x 144.54pt>
+<17.png, id=119, 240.9pt x 144.54pt>
 File: 17.png Graphic file (type png)
  <use 17.png>
-Package pdftex.def Info: 17.png used on input line 669.
+Package pdftex.def Info: 17.png used on input line 737.
 (pdftex.def)             Requested size: 215.0023pt x 129.00407pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 647--670
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 715--738
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 647--670
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 715--738
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 647--670
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 715--738
 [] 
  []
 
-[25 <./12.png> <./13.png> <./14.png> <./15.png> <./16.png>]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 671--679
+[27 <./12.png> <./13.png> <./14.png> <./15.png> <./16.png>]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 739--747
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 680--688
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 748--756
 []
  []
 
-<18.png, id=109, 879.285pt x 405.515pt>
+<18.png, id=123, 879.285pt x 405.515pt>
 File: 18.png Graphic file (type png)
  <use 18.png>
-Package pdftex.def Info: 18.png used on input line 695.
+Package pdftex.def Info: 18.png used on input line 763.
 (pdftex.def)             Requested size: 430.00462pt x 198.30806pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 691--697
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 759--765
 []
  []
 
-<19.png, id=110, 1927.2pt x 987.69pt>
+<19.png, id=124, 1927.2pt x 987.69pt>
 File: 19.png Graphic file (type png)
  <use 19.png>
-Package pdftex.def Info: 19.png used on input line 702.
+Package pdftex.def Info: 19.png used on input line 770.
 (pdftex.def)             Requested size: 430.00462pt x 220.36693pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 698--704
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 766--772
 []
  []
 
-[26 <./17.png> <./18.png>] <20.png, id=114, 1927.2pt x 987.69pt>
+[28 <./17.png> <./18.png>] <20.png, id=128, 1927.2pt x 987.69pt>
 File: 20.png Graphic file (type png)
  <use 20.png>
-Package pdftex.def Info: 20.png used on input line 709.
+Package pdftex.def Info: 20.png used on input line 777.
 (pdftex.def)             Requested size: 430.00462pt x 220.36693pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 705--711
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 773--779
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 715--721
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 783--789
 []
  []
 
-<23.png, id=115, 878.28125pt x 392.46625pt>
+<23.png, id=129, 878.28125pt x 392.46625pt>
 File: 23.png Graphic file (type png)
  <use 23.png>
-Package pdftex.def Info: 23.png used on input line 726.
+Package pdftex.def Info: 23.png used on input line 794.
 (pdftex.def)             Requested size: 430.00462pt x 192.15443pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 722--728
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 790--796
 []
  []
 
-[27 <./19.png> <./20.png>] <24.png, id=119, 1862.96pt x 986.68625pt>
+[29 <./19.png> <./20.png>] <24.png, id=133, 1862.96pt x 986.68625pt>
 File: 24.png Graphic file (type png)
 
 <use 24.png>
-Package pdftex.def Info: 24.png used on input line 733.
+Package pdftex.def Info: 24.png used on input line 801.
 (pdftex.def)             Requested size: 430.00462pt x 227.74606pt.
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 729--735
-[]
- []
-
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 740--746
-[]
- []
-
-<25.png, id=120, 873.2625pt x 393.47pt>
-File: 25.png Graphic file (type png)
- <use 25.png>
-Package pdftex.def Info: 25.png used on input line 751.
-(pdftex.def)             Requested size: 430.00462pt x 193.75058pt.
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 747--753
-[]
- []
-
-[28 <./23.png> <./24.png>] <26.png, id=124, 1862.96pt x 986.68625pt>
-File: 26.png Graphic file (type png)
-
-<use 26.png>
-Package pdftex.def Info: 26.png used on input line 758.
-(pdftex.def)             Requested size: 430.00462pt x 227.74606pt.
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 754--760
-[]
- []
-
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 765--773
-[]
- []
-
-
-Overfull \hbox (1.64363pt too wide) in paragraph at lines 774--780
-[]\T1/lmr/m/n/10 Du coup, com-ment peux-t-on s'af-fran-chir de ce fil-trage de 
-guille-mets ? LES AC-CENTS GRAVES !
- []
-
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 774--780
-[]
- []
-
-[29 <./25.png> <./26.png>] <27.png, id=128, 878.28125pt x 392.46625pt>
-File: 27.png Graphic file (type png)
-
-<use 27.png>
-Package pdftex.def Info: 27.png used on input line 785.
-(pdftex.def)             Requested size: 430.00462pt x 192.15443pt.
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 781--787
-[]
- []
-
-<28.png, id=129, 1862.96pt x 986.68625pt>
-File: 28.png Graphic file (type png)
- <use 28.png>
-Package pdftex.def Info: 28.png used on input line 792.
-(pdftex.def)             Requested size: 430.00462pt x 227.74606pt.
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 788--794
-[]
- []
-
 
 Overfull \hbox (6.79999pt too wide) in paragraph at lines 797--803
 []
  []
 
-<xss1.png, id=130, 1862.96pt x 985.6825pt>
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 808--814
+[]
+ []
+
+<25.png, id=134, 873.2625pt x 393.47pt>
+File: 25.png Graphic file (type png)
+ <use 25.png>
+Package pdftex.def Info: 25.png used on input line 819.
+(pdftex.def)             Requested size: 430.00462pt x 193.75058pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 815--821
+[]
+ []
+
+[30 <./23.png> <./24.png>] <26.png, id=138, 1862.96pt x 986.68625pt>
+File: 26.png Graphic file (type png)
+
+<use 26.png>
+Package pdftex.def Info: 26.png used on input line 826.
+(pdftex.def)             Requested size: 430.00462pt x 227.74606pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 822--828
+[]
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 833--841
+[]
+ []
+
+
+Overfull \hbox (1.64363pt too wide) in paragraph at lines 842--848
+[]\T1/lmr/m/n/10 Du coup, com-ment peux-t-on s'af-fran-chir de ce fil-trage de 
+guille-mets ? LES AC-CENTS GRAVES !
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 842--848
+[]
+ []
+
+[31 <./25.png> <./26.png>] <27.png, id=143, 878.28125pt x 392.46625pt>
+File: 27.png Graphic file (type png)
+
+<use 27.png>
+Package pdftex.def Info: 27.png used on input line 853.
+(pdftex.def)             Requested size: 430.00462pt x 192.15443pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 849--855
+[]
+ []
+
+<28.png, id=144, 1862.96pt x 986.68625pt>
+File: 28.png Graphic file (type png)
+ <use 28.png>
+Package pdftex.def Info: 28.png used on input line 860.
+(pdftex.def)             Requested size: 430.00462pt x 227.74606pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 856--862
+[]
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 865--871
+[]
+ []
+
+<xss1.png, id=145, 1862.96pt x 985.6825pt>
 File: xss1.png Graphic file (type png)
  <use xss1.png>
-Package pdftex.def Info: xss1.png used on input line 808.
+Package pdftex.def Info: xss1.png used on input line 876.
 (pdftex.def)             Requested size: 430.00462pt x 227.51437pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 804--810
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 872--878
 []
  []
 
-[30 <./27.png> <./28.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 815--816
+[32 <./27.png> <./28.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 883--884
 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 817--825
-[]
- []
-
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 826--832
-[]
- []
-
-<xss2.png, id=134, 1862.96pt x 985.6825pt>
-File: xss2.png Graphic file (type png)
- <use xss2.png>
-Package pdftex.def Info: xss2.png used on input line 837.
-(pdftex.def)             Requested size: 430.00462pt x 227.51437pt.
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 833--839
-[]
- []
-
-[31 <./xss1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 840--841
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 854--854
-[]\T1/lmr/m/n/7 &#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114
-&#0000105&#0000112&#0000116
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 854--854
-\T1/lmr/m/n/7 &#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#
-0000039&#0000088&#0000083
- []
-
-
-Overfull \hbox (2.21263pt too wide) in paragraph at lines 854--854
-\T1/lmr/m/n/7 &#106 ;&#97 ;&#118 ;&#97 ;&#115 ;&#99 ;&#114 ;&#105 ;&#112 ;&#116
- ;&#58 ;&#97 ;&#108 ;&#101 ;&#114 ;&#116 ;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 854--854
-\T1/lmr/m/n/7 &#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C
-&#x65
- []
-
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 842--856
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 885--893
 []
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 861--867
-[]
- []
-
-<xss3.png, id=139, 1862.96pt x 985.6825pt>
-File: xss3.png Graphic file (type png)
- <use xss3.png>
-Package pdftex.def Info: xss3.png used on input line 872.
-(pdftex.def)             Requested size: 430.00462pt x 227.51437pt.
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 868--874
-[]
- []
-
-[32 <./xss2.png>]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 875--881
-[]
- []
-
-<xss4.png, id=143, 1862.96pt x 985.6825pt>
-File: xss4.png Graphic file (type png)
- <use xss4.png>
-Package pdftex.def Info: xss4.png used on input line 886.
-(pdftex.def)             Requested size: 430.00462pt x 227.51437pt.
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 882--888
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 891--893
-
- []
-
-[33 <./xss3.png> <./xss4.png>]
 Overfull \hbox (6.79999pt too wide) in paragraph at lines 894--900
 []
  []
 
-<xss5.png, id=147, 1862.96pt x 985.6825pt>
-File: xss5.png Graphic file (type png)
- <use xss5.png>
-Package pdftex.def Info: xss5.png used on input line 905.
+<xss2.png, id=149, 1862.96pt x 985.6825pt>
+File: xss2.png Graphic file (type png)
+ <use xss2.png>
+Package pdftex.def Info: xss2.png used on input line 905.
 (pdftex.def)             Requested size: 430.00462pt x 227.51437pt.
 
 Overfull \hbox (6.79999pt too wide) in paragraph at lines 901--907
 []
  []
 
-[34 <./xss5.png>] <cve1.png, id=151, 518.93875pt x 256.96pt>
+[33 <./xss1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 908--909
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+[]\T1/lmr/m/n/7 &#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114
+&#0000105&#0000112&#0000116
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T1/lmr/m/n/7 &#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#
+0000039&#0000088&#0000083
+ []
+
+
+Overfull \hbox (2.21263pt too wide) in paragraph at lines 922--922
+\T1/lmr/m/n/7 &#106 ;&#97 ;&#118 ;&#97 ;&#115 ;&#99 ;&#114 ;&#105 ;&#112 ;&#116
+ ;&#58 ;&#97 ;&#108 ;&#101 ;&#114 ;&#116 ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--922
+\T1/lmr/m/n/7 &#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C
+&#x65
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 910--924
+[]
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 929--935
+[]
+ []
+
+<xss3.png, id=153, 1862.96pt x 985.6825pt>
+File: xss3.png Graphic file (type png)
+ <use xss3.png>
+Package pdftex.def Info: xss3.png used on input line 940.
+(pdftex.def)             Requested size: 430.00462pt x 227.51437pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 936--942
+[]
+ []
+
+[34 <./xss2.png>]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 943--949
+[]
+ []
+
+<xss4.png, id=157, 1862.96pt x 985.6825pt>
+File: xss4.png Graphic file (type png)
+ <use xss4.png>
+Package pdftex.def Info: xss4.png used on input line 954.
+(pdftex.def)             Requested size: 430.00462pt x 227.51437pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 950--956
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 959--961
+
+ []
+
+[35 <./xss3.png> <./xss4.png>]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 962--968
+[]
+ []
+
+<xss5.png, id=161, 1862.96pt x 985.6825pt>
+File: xss5.png Graphic file (type png)
+ <use xss5.png>
+Package pdftex.def Info: xss5.png used on input line 973.
+(pdftex.def)             Requested size: 430.00462pt x 227.51437pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 969--975
+[]
+ []
+
+[36 <./xss5.png>] <cve1.png, id=165, 518.93875pt x 256.96pt>
 File: cve1.png Graphic file (type png)
  <use cve1.png>
-Package pdftex.def Info: cve1.png used on input line 916.
+Package pdftex.def Info: cve1.png used on input line 984.
 (pdftex.def)             Requested size: 430.00462pt x 212.93562pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 912--918
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 980--986
 []
  []
 
-<cve2.png, id=152, 993.7125pt x 82.3075pt>
+<cve2.png, id=166, 993.7125pt x 82.3075pt>
 File: cve2.png Graphic file (type png)
  <use cve2.png>
-Package pdftex.def Info: cve2.png used on input line 923.
+Package pdftex.def Info: cve2.png used on input line 991.
 (pdftex.def)             Requested size: 430.00462pt x 35.61633pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 919--925
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 987--993
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 926--927
+Underfull \hbox (badness 10000) in paragraph at lines 994--995
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 928--929
+Underfull \hbox (badness 10000) in paragraph at lines 996--997
 
  []
 
-[35 <./cve1.png> <./cve2.png>] [36] (presentation.aux) ) 
+[37 <./cve1.png> <./cve2.png>]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1002--1008
+[]
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1009--1017
+[]
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1018--1027
+[]
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1028--1044
+[]
+ []
+
+[38] [39] (presentation.aux) ) 
 Here is how much of TeX's memory you used:
- 3942 strings out of 493673
- 52467 string characters out of 3141527
+ 3982 strings out of 493673
+ 52939 string characters out of 3141527
  225347 words of memory out of 3000000
- 7190 multiletter control sequences out of 15000+200000
+ 7222 multiletter control sequences out of 15000+200000
  39382 words of font info for 33 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  28i,12n,43p,792b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)
-/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/public/lm/lmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
-blic/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr
-10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb>
-Output written on presentation.pdf (36 pages, 2707537 bytes).
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvip
+s/lm/lm-ec.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb>
+Output written on presentation.pdf (39 pages, 2789121 bytes).
 PDF statistics:
- 174 PDF objects out of 1000 (max. 8388607)
+ 194 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 201 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 241 words of extra memory for PDF output out of 10000 (max. 10000000)
 

