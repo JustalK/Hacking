@@ -314,6 +314,10 @@ Pour se protéger contre ce type d'attaque, il suffit de vérifier que les infor
 \section{Attaque temporel - Attaque par Canaux cachés}
 \subsection{Qu'est ce qu'un canal caché ?}
 
+
+\newpage
+\section{Attaque temporel - Attaque par Canaux cachés}
+
 \newpage
 \section{CSRF - Cross-site request forgery}
 \subsection{Qu'est ce qu'une attaque CSRF ?}
@@ -900,6 +904,29 @@ Ce qui permet d'obtenir le résultat suivant :
 \includegraphics[width=\textwidth]{xss5}
 }}
 \vspace{0.2cm}
+
+\newpage
+\section{Pour aller plus loin...}
+\subsection{CVE-2015-XXXX - PHP - NULL Char}
+
+Une petite faille qui montre qu'un caractère null est toujours une épine qui existe dans de nombreuses applications et la dernière version de php ne fait pas exception à la règle (5.5.12). Cette CVE permet de bypasser certaines fonctions en entrant des caractères supplémentaires. Par exemple, prenons la fonction set\_include\_path() qui permet de specifier le get\_include\_path() de l'application. Le contexte est le suivant, l'utilisateur ne doit en aucun cas pouvoir uploader des .php qui pourrait compromettre l'application. Notre développeur jeune et fougueux va écrire du code de manière étrange et qui fonctionne :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{cve1}
+}}
+\vspace{0.2cm}
+
+Si on essaye par exemple de rentrer dans la variable path : index.php, nous ne passerons pas le strpos. Cependant la fonction set\_include\_path presente une faille sur le caractère null, nous allons donc essaye : \%00index.php
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{cve2}
+}}
+\vspace{0.2cm}
+
+A noter que cette faille existe sur plusieurs fonctions de php comme :\\ 
+
+tempnam(),rmdir(),readlink(),pcntl\_exec(),move\_uploaded\_file()\\
+
 
 \newpage
 \section{Bibliographie}
