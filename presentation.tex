@@ -618,6 +618,28 @@ Il faudra donc prendre en compte ces dernière pour refaire la même injection q
 \vspace{0.2cm}
 
 \newpage
+\section{Direct Dynamic Code Evaluation}
+\subsection{Préambule}
+
+Afin d'illustrer le principe d'évaluation dynamique de code, un exemple simple ira plus vite que de longue ligne :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+<?php\\
+\hspace*{0.6cm}\$myfunc = \$\_GET['myfunc'];\\
+\hspace*{0.6cm}\$myfunc();\\
+?>
+}}
+\vspace{0.2cm}
+
+Dans le code suivant, si la variable GET myfunc est phpinfo. On injectera directement la fonction lors de l'execution du code :
+\vspace{0.2cm}\\
+\fbox{\parbox{\textwidth}{
+\includegraphics[width=\textwidth]{ddce}
+}}
+\vspace{0.2cm}
+
+
+\newpage
 \section{XSS}
 \subsection{Préambule}
 A cette question, je vais encore répondre par un exemple. Je considère que c'est par la pratique que l'on apprend les fondamentaux. Imaginons que nous soyons sur un forum et un lien a été posté. Bien entendu ce lien a été trafiqué par une XSS pour obtenir le code HTML suivant :

@@ -41,23 +41,25 @@
 \contentsline {subsection}{\numberline {8.1}Pr\IeC {\'e}ambule}{22}
 \contentsline {subsection}{\numberline {8.2}Simple SQL Injection}{22}
 \contentsline {subsection}{\numberline {8.3}Simple SQL Injection 2}{23}
-\contentsline {section}{\numberline {9}XSS}{25}
+\contentsline {section}{\numberline {9}Direct Dynamic Code Evaluation}{25}
 \contentsline {subsection}{\numberline {9.1}Pr\IeC {\'e}ambule}{25}
-\contentsline {subsection}{\numberline {9.2}Test de l'existence d'une faille XSS de mani\IeC {\`e}re rapide}{26}
-\contentsline {subsection}{\numberline {9.3}Simple XSS - balise script}{26}
-\contentsline {subsection}{\numberline {9.4}XSS - Bypass htmlspecialchars par erreurs avec la balise SVG}{27}
-\contentsline {subsection}{\numberline {9.5}XSS - Bypass htmlspecialchars et htmlentities avec simples guillemets}{28}
-\contentsline {subsection}{\numberline {9.6}XSS - Bypass htmlspecialchars et htmlentities avec UTF-7}{29}
-\contentsline {subsection}{\numberline {9.7}XSS - Bypass htmlspecialchars et htmlentities avec les directives Javascript}{29}
-\contentsline {subsection}{\numberline {9.8}XSS - Bypass htmlspecialchars et htmlentities et les filtrages de chaines}{30}
-\contentsline {subsection}{\numberline {9.9}XSS - Bypass htmlspecialchars et htmlentities avec les accents graves}{31}
-\contentsline {subsection}{\numberline {9.10}XSS - Avec les malformations de balise et l'auto-correction des navigateurs}{32}
-\contentsline {subsection}{\numberline {9.11}XSS - Bypass htmlspecialchars et htmlentities avec l'encoding UTF-8}{33}
-\contentsline {subsection}{\numberline {9.12}XSS - Bypass htmlspecialchars et htmlentities avec des espaces}{34}
-\contentsline {subsection}{\numberline {9.13}XSS - Bypass htmlspecialchars et htmlentities avec JSFuck}{35}
-\contentsline {section}{\numberline {10}Pour aller plus loin...}{37}
-\contentsline {subsection}{\numberline {10.1}CVE-2015-XXXX - PHP - NULL Char}{37}
-\contentsline {section}{\numberline {11}Les anciennes failles}{38}
-\contentsline {subsection}{\numberline {11.1}HTML Splitting}{38}
-\contentsline {section}{\numberline {12}Bibliographie}{39}
-\contentsline {subsection}{\numberline {12.1}SMTP Injection}{39}
+\contentsline {section}{\numberline {10}XSS}{26}
+\contentsline {subsection}{\numberline {10.1}Pr\IeC {\'e}ambule}{26}
+\contentsline {subsection}{\numberline {10.2}Test de l'existence d'une faille XSS de mani\IeC {\`e}re rapide}{27}
+\contentsline {subsection}{\numberline {10.3}Simple XSS - balise script}{27}
+\contentsline {subsection}{\numberline {10.4}XSS - Bypass htmlspecialchars par erreurs avec la balise SVG}{28}
+\contentsline {subsection}{\numberline {10.5}XSS - Bypass htmlspecialchars et htmlentities avec simples guillemets}{29}
+\contentsline {subsection}{\numberline {10.6}XSS - Bypass htmlspecialchars et htmlentities avec UTF-7}{30}
+\contentsline {subsection}{\numberline {10.7}XSS - Bypass htmlspecialchars et htmlentities avec les directives Javascript}{30}
+\contentsline {subsection}{\numberline {10.8}XSS - Bypass htmlspecialchars et htmlentities et les filtrages de chaines}{31}
+\contentsline {subsection}{\numberline {10.9}XSS - Bypass htmlspecialchars et htmlentities avec les accents graves}{32}
+\contentsline {subsection}{\numberline {10.10}XSS - Avec les malformations de balise et l'auto-correction des navigateurs}{33}
+\contentsline {subsection}{\numberline {10.11}XSS - Bypass htmlspecialchars et htmlentities avec l'encoding UTF-8}{34}
+\contentsline {subsection}{\numberline {10.12}XSS - Bypass htmlspecialchars et htmlentities avec des espaces}{35}
+\contentsline {subsection}{\numberline {10.13}XSS - Bypass htmlspecialchars et htmlentities avec JSFuck}{36}
+\contentsline {section}{\numberline {11}Pour aller plus loin...}{38}
+\contentsline {subsection}{\numberline {11.1}CVE-2015-XXXX - PHP - NULL Char}{38}
+\contentsline {section}{\numberline {12}Les anciennes failles}{39}
+\contentsline {subsection}{\numberline {12.1}HTML Splitting}{39}
+\contentsline {section}{\numberline {13}Bibliographie}{40}
+\contentsline {subsection}{\numberline {13.1}SMTP Injection}{40}
